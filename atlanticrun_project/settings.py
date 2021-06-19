@@ -28,12 +28,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+RECAPTCHA_PRIVATE_KEY = '6Le87UAbAAAAAM8K2WzMi6YGwcThWPtCqRXTe5sY'
+RECAPTCHA_PUBLIC_KEY = '6Le87UAbAAAAAEbX6tCNCCOJMEtrKQ1F5S8iPsBi'
 
 # Application definition
 
 INSTALLED_APPS = [
     'index.apps.IndexConfig',
-    'modeltranslation',
+    'envol.apps.EnvolConfig',
+    'contact.apps.ContactConfig',
+    'snowpenguin.django.recaptcha2',
+    #'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -140,3 +145,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+
+TRANSLATABLE_MODEL_MODULES = []
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

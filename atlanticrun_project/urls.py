@@ -19,8 +19,12 @@ from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = i18n_patterns(
-    path('', include('index.urls', 'index'), namespace = 'index'),
+    path('', include(('index.urls', 'index'), namespace='index')),
+    path('l_envol', include(('envol.urls', 'envol'), namespace='envol')),
+    path('nous_decouvrir', include(('decouvrir.urls', 'decouvrir'), namespace='decouvrir')),
+    path('contact', include(('contact.urls', 'contact'), namespace='contact')),
     path('admin/', admin.site.urls),
+    prefix_default_language=False,
 )
 
 

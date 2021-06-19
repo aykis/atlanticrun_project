@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+    <section class="presentation" style="padding:50px 0px;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-2">
+                    <img width="100%" height="auto" src="{% static 'images/asf.png' %}">
+                </div>
+                <div class="col-md-8">
+                <h1>Atlantiques Sans Frontières<br>ASF</h1>
+                <p style="text-align: justify;">Atlantique Sans Frontière est l’association humanitaire de IMT Atlantique.
+                Créée en janvier 2007, selon la loi 1901, son but premier était de dispenser des aides concrètes dans les pays en voie de développement.
+                C’est ainsi que divers projets sont nés, comme des voyages humanitaires au Nicaragua ou en Côte d’Ivoire, des concerts caritatifs ou des opérations “bol de riz”, dont le but est de demander aux élèves de ne manger qu’un bol de riz en payant leur repas au prix habituel, et de reverser le gain engendré à des associations comme Afrique Initiative.<br>
+                ASF souhaite avant tout mener des actions durables en aidant des populations et personnes dans le besoin.</p>
+                </div>
+            </div>
+            <div style="margin-top:20px" class="row text-center">
+                <div class="col-md-6">
+                    <img class="decouvrir" src="{% static 'images/ASF1.PNG' %}">
+                </div>
+                <div class="col-md-6">
+                    <img class="decouvrir" src="{% static 'images/ASF2.PNG' %}">
+                </div>
+            </div>
+
+
+            <div class="row text-center" style="padding:70px 0px;">
+                <div class="col-md-2">
+                    <img width="100%" height="auto" src="{% static 'images/bds.jpg' %}">
+                </div>
+                <div class="col-md-8">
+                <h1>BDS IMT Atlantique<br>Campus de Brest</h1>
+                <p style="text-align: justify;">{% blocktrans %}Le Bureau Des Sports (BDS) de IMT Atlantique est l’association étudiante qui s’occupe de la vie sportive des élèves du campus.
+                De la demande d’intervenants à la rénovation des infrastructures, le BDS a un levier d’action assez important.
+                Grâce à ses partenariats, le BDS participe activement à l’organisation de l’Atlantic Run.{% endblocktrans %}</p>
+                </div>
+            </div>
+            <div style="margin-top:20px" class="row text-center">
+                <div class="col-md-6">
+                    <img class="decouvrir" src="{% static 'images/arthur_course.PNG' %}">
+                </div>
+                <div class="col-md-6">
+                    <img class="decouvrir" src="{% static 'images/arthur_course.PNG' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

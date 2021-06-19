@@ -1,30 +1,74 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+
+:root{
+  --jaune: #FFC928;
+  --shadow: #275c8d1a;
+  --black-text: #23242A;
+  --bleu: #0E6FFF;
+}
+
 /* ==========================================================================
 Typography
 ========================================================================== */
 p {
-  font-size: 14px;
-  line-height: 22.4px;
-  color: #6c7279; }
+  font-family: FreeSans;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 145%;
+  letter-spacing: -0.01em;
+  /*text-align: left;*/
+  color: var(--black-text);
+ }
 
 h1 {
-  font-size: 65px;
-  color: #2d3033; }
+  font-family: FreeSans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 120%;
+  /* identical to box height, or 84px */
+  letter-spacing: -0.01em;
+  /* Base/Black */
+  color: var(--black-text);}
 
 h2 {
-  font-size: 40px;
-  color: #2d3033; }
+  font-family: FreeSans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 110%;
+  /* or 70px */
+
+  text-align: center;
+  letter-spacing: -0.045em;
+
+  /* Base/Black */
+
+  color: var(--black-text);}
 
 h3 {
-  font-size: 28px;
-  color: #2d3033;
-  font-weight: 300; }
+  font-family: FreeSans;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px;
+  letter-spacing: -0.045em;
+  text-align: left;
+  color: var(--black-text);
+}
 
 h4 {
-  font-size: 22px;
-  color: #2d3033;
-  font-weight: 400; }
+  font-family: FreeSans;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: -0.045em;
+  text-align: left;
+  color: var(--black-text);
+ }
 
 h5 {
   font-size: 14px;
@@ -49,6 +93,36 @@ h5 {
   .btn-large {
     padding: 15px 40px; }
 
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 16px;
+    line-height: 120%;
+   }
+  
+  h1 {
+    font-size: 55px;
+    line-height: 120%;}
+  
+  h2 {
+    font-size: 34px;
+    line-height: 110%;
+    color: var(--black-text);}
+  
+  h3 {
+    font-size: 40px;
+    line-height: 110%;
+  }
+  
+  h4 {
+    font-size: 36px;
+    line-height: 110%;
+   }
+  
+  h5 {
+    font-size: 8px;}  
+}
+
 /* ==========================================================================
 	General Styles
 ========================================================================== */
@@ -65,7 +139,8 @@ a:hover, a:focus {
 body {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  color: #6c7279; }
+  color: var(--black-text);
+  background-color: #E4ECF2; }
 
 ul, ol {
   margin: 0;
@@ -75,7 +150,7 @@ ul li {
   list-style: none; }
 
 .section {
-  padding: 100px 0; }
+  padding: 40px 0; }
 
 .no-padding {
   padding: 0; }
@@ -84,25 +159,39 @@ ul li {
   padding-right: 0;
   padding-left: 0; }
 
+.row {
+  align-items: normal;
+}
 /* ==========================================================================
 	$Header
 ========================================================================== */
 #header {
-  position: fixed;
+  align-items: flex-end;
   width: 100%;
   z-index: 999; }
   #header .header-content {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    margin: 0 auto;
-    max-width: 1170px;
-    padding: 40px 0;
-    width: 100%;
-    -moz-transition: padding 0.3s;
-    -o-transition: padding 0.3s;
-    -webkit-transition: padding 0.3s;
-    transition: padding 0.3s; }
-  #header .logo {
-    float: left; }
+    /* Auto Layout */
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*margin: 5px;*/
+    
+    /*position: absolute;
+    width: 1380px;*/}
+  #header .header-button {
+    position: absolute;
+    width: 440px;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    
+    /* Base/Light */
+    background: #FFFFFF;
+    /* Shadow */
+    box-shadow: 10px 10px 50px 3px var(--shadow);
+    border-radius: 8px;
+  }
 
 #header.fixed {
   background-color: #292c47; }
@@ -113,25 +202,37 @@ ul li {
     top: 18px; }
 
 .navigation.open {
-  opacity: 0.9;
+  opacity: 1;
   visibility: visible;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s; }
+  -moz-transition: ease 0.5s;
+  -o-transition: ease 0.5s;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s; }
 
 .navigation {
   float: right; }
   .navigation li {
-    display: inline-block; }
+    display: inline-block;
+    text-align: center;
+    margin:30px;}
   .navigation a {
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 13px;
-    font-weight: 700;
-    margin-left: 40px;
-    text-transform: uppercase; }
+    font-family: Pragmatica;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 110%;
+    /* or 48px */
+    
+    text-align: center;
+    margin: 30px;
+    /*letter-spacing: -0.03em;*/
+    
+    /* Base/Black */
+    
+    color: var(--black-text);}
     .navigation a:hover, .navigation a.active {
-      color: #fff; }
+      color: #000;
+    }
 
 .nav-toggle {
   display: none;
@@ -259,23 +360,78 @@ ul li {
 /* ==========================================================================
 	$Banner
 ========================================================================== */
+
+.nav-link{
+  text-align: center;
+  font-family: Pragmatica;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 110%;
+
+  background: #ffffff;
+  color: #000;
+  padding: 10px 20px;
+  margin: 20px;
+  width: 330px;
+  outline: none!important;
+
+  box-shadow: 10px 10px 50px var(--shadow);
+  border-radius: 8px;
+  border-width: 0px;
+}
+
+.nav-link:hover{
+	background: var(--jaune);
+	color: #000;
+}
+
 .banner {
-  background-image: url(../images/banner.jpg);
-  background-position: center top;
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  min-height: 750px; }
+  background-color: var(--black-text);
+  padding:10px; }
+
+.banner-nav {
+  background-color: var(--black-test);
+  height: 100%;
+  background: linear-gradient(0deg, #ffffff00 50%, var(--black-text) 50%);
+}
+
+.banner-logo {
+  width: 343px;
+  margin: 29px 0px;
+}
 
 .banner-text {
-  padding-top: 25%; }
+    font-family: sans-serif;}
   .banner-text h1 {
-    color: #fff;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase; }
+    /*2 mois 10 jours */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 110%;
+    /* or 72px */
+    
+    text-align: center;
+    letter-spacing: -0.045em;
+    
+    /* Base/Secondary */
+    color: var(--jaune);
+  }
+    .banner-text h2 {
+    /* L’événement commence dans 
+    font-family: FreeSans;*/
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 110%;
+    /* or 55px */
+
+    text-align: center;
+    letter-spacing: -0.045em;
+
+    /* Base/Secondary */
+    color: var(--jaune);
+  }
   .banner-text p {
     color: #fff;
     font-size: 22px;
@@ -283,29 +439,68 @@ ul li {
     line-height: 1.5;
     margin-bottom: 80px; }
 
+
 /* ==========================================================================
-	$Features
+	$Course
 ========================================================================== */
-.feature {
-  margin-bottom: 50px; }
-  .feature-content {
-    padding: 0 15px;
-    margin-top: 30px; }
-  .feature .icon {
-    color: #e84545;
-    font-size: 60px; }
+.course {
+  /*margin: 0px 100px;*/
+  text-align: center;
+}
+/*.course h4 {
+  text-align: center;
+  font-size: 30px;
+  margin: 0px;
+}
+.course p {
+  font-size: 24px;
+  /*text-align: center;
+}*/
+
+
+@media screen and (max-width: 768px) {
+  .course h4 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .course p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+/* Slides in course */
+
+.course .slides-navigation a {
+  height: 33px;
+  width: 33px;
+  top: 50%;
+  border-radius: 10px;
+  line-height: normal;
+}
+.course .slides {
+  overflow: revert!important;
+}
+.course .slides-navigation a i{
+  font-size: 29px;
+}
+.course .slides-navigation a:hover {
+  background: var(--bleu);
+  color: #fff;
+}
 
 /* ==========================================================================
 	$Works
 ========================================================================== */
 .work {
-  -moz-box-shadow: 0 0 0 1px #fff;
-  -webkit-box-shadow: 0 0 0 1px #fff;
-  box-shadow: 0 0 0 1px #fff;
-  min-height: 350px;
+  -moz-box-shadow: 0 0 0 0px #fff;
+  -webkit-box-shadow: 0 0 0 0px #fff;
+  box-shadow: 0 0 0 0px #fff;
+  /*min-height: 350px;*/
   overflow: hidden;
   position: relative;
-  visibility: hidden; }
+  visibility: hidden;
+  text-align: justify;}
   .work .overlay {
     background: rgba(232, 69, 69, 0.9);
     height: 100%;
@@ -334,7 +529,7 @@ ul li {
     transition: all, 0.5s; }
   .work h5, .work p {
     color: #fff;
-    margin: 0;
+    margin: 20px;
     opacity: 0; }
   .work h5 {
     margin-bottom: 5px;
@@ -363,87 +558,19 @@ ul li {
     transform: translate3d(0, 0, 0); }
 
 /* ==========================================================================
-	$Teams
+	$Presentation
 ========================================================================== */
-.person {
-  max-width: 270px; }
-  .person-content {
-    margin-top: 20px; }
-  .person h4 {
-    font-weight: 400; }
-  .person h5 {
-    color: #e84545;
-    font-size: 13px;
-    font-weight: 400;
-    margin-bottom: 20px; }
-
-.social-icons, .footer .footer-share {
-  margin-top: 30px; }
-  .social-icons li, .footer .footer-share li {
-    float: left; }
-  .social-icons a, .footer .footer-share a {
-    border: 1px solid #e8ecee;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
-    color: #c6cacc;
-    display: block;
-    font-size: 18px;
-    height: 40px;
-    line-height: 40px;
-    margin-right: 5px;
-    text-align: center;
-    width: 40px; }
-    .social-icons a:hover, .footer .footer-share a:hover {
-      background-color: #e84545;
-      border-color: #e84545;
-      color: #fff; }
-
-/* ==========================================================================
-	$Testimonials
-========================================================================== */
-.testimonials {
-  background-color: #53354a;
-  position: relative; }
-  .testimonials blockquote {
-    border: 0;
-    margin: 0;
-    padding: 100px 15% 0; }
-  .testimonials p {
-    color: #fff;
-    font: italic 36px "Cardo", Georgia, "Times New Roman", serif; }
-  .testimonials cite {
-    color: #fff;
-    display: block;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 600;
-    margin-top: 30px;
-    text-transform: uppercase; }
-
-/* ==========================================================================
-	$Download
-========================================================================== */
-.download h3 {
-  margin-top: 0; }
-.download p {
-  color: #2d3033;
-  font-weight: 600;
-  text-transform: uppercase; }
-.download .btn {
-  margin-top: 30px; }
+.presentation {
+  text-align: justify;
+}
 
 /* ==========================================================================
 	$Footer
 ========================================================================== */
 .footer {
-  text-align: center; }
-  .footer-top {
-    background-color: #3a3e64;
-    padding-top: 50px; }
-  .footer-bottom {
-    background-color: #313454;
-    padding: 20px 0; }
+  text-align: center;
+  background-color: #000;
+  padding: 20px;}
   .footer .footer-col {
     margin-bottom: 80px; }
   .footer h5 {
@@ -451,11 +578,30 @@ ul li {
   .footer h5 {
     margin-bottom: 20px; }
   .footer p {
-    color: rgba(255, 255, 255, 0.5); }
+    font-family: FreeSans;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color:#fff;
+    opacity: 0.5;
+    }
   .footer a {
-    color: #fff; }
+    font-family: Pragmatica;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: -0.03em;
+    text-decoration-line: underline;    
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
+  }
     .footer a:hover {
-      color: #e84545; }
+      color: var(--jaune); }
   .footer .footer-share {
     margin-top: 0; }
     .footer .footer-share li {
@@ -468,6 +614,9 @@ ul li {
     color: #e84545;
     font-size: 11px;
     margin: 0 2px; }
+  .footer .logo {
+    height: 74px;
+  }
 
 /* ==========================================================================
 	$Utilities

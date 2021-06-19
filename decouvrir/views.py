@@ -8,4 +8,4 @@ def index(request):
     context = {
         'decompteur' : base.decompteur(),
     }
-    return render(request, 'index/index.html', context)
+    return render(request, 'decouvrir/index.html', context)

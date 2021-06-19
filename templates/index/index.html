@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+    <section id="presentation" class="presentation section">
+        <div class="container">
+            <div class="row" style="align-items: normal;">
+                <div class="col-lg-8 col-md-6 img-carre-ref" style="padding-right:30px;">
+                    <h3>{% trans 'La course Atlantic Run' %}</h3>
+                    <p>{% blocktranslate %}
+                    L’AtlanticRun est une course caritative organisée par ASF et le BDS de IMT Atlantique, au profit de l’association L’Envol, en partenariat avec divers groupes et entreprises.<br><br>
+                    Après un départ sur le campus de IMT Atlantique au Technopôle Brest-Iroise, vous aurez l’occasion de longer la côte en passant par le sentier côtier, rejoindre la vallée de Sainte-Anne en passant par la Trinité, puis revenir au campus.<br><br>
+                    Une participation permettra de financer le projet de l’Envol:{% endblocktranslate %}<br></p>
+                    <h2>{% trans '1 course = 1 don' %}</h2>
+                </div>
+
+                {% comment %} Version image
+                <div class="col-lg-4 col-md-6 col-sm-6 work">
+                    <a href="{% static 'images/map_global.PNG' %}" class="work-box">
+                        <img class="img-carre" src="{% static 'images/map_global.PNG' %}" alt="">
+                        <div class="overlay">
+                            <div class="overlay-caption">
+                                <h5>{% trans 'Campus de Brest' %}</h5>
+                                <p>{% trans 'Carte global' %}</p>
+                            </div>
+                        </div><!-- overlay -->
+                    </a>
+                </div>
+                {% endcomment %}
+                <div class="col-lg-4 col-md-6 img-carre">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15247.045699869712!2d-4.575150029924401!3d48.35884407532513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816be39dac601ad%3A0x271a5b153615b2ad!2sIMT%20Atlantique!5e1!3m2!1sen!2sfr!4v1623691038456!5m2!1sen!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section><!-- works -->
+
+    <div id="slides" class="cover-slides">
+		<ul class="slides-container">
+			<li class="text-left">
+				<img src="{% static 'images/arthur_course.PNG' %}" alt="">
+			</li>
+			<li class="text-left">
+				<img src="{% static 'images/arthur_course.PNG' %}" alt="">
+			</li>
+		</ul>
+
+		<div class="slides-navigation">
+			<a href="#" class="next"><i class="fa fa-arrow-right hidden-sm hidden-xs" style="font-size:36px" aria-hidden="true"></i></a>
+			<a href="#" class="prev"><i class="fa fa-arrow-left hidden-sm hidden-xs" style="font-size:36px" aria-hidden="true"></i></a>
+		</div>
+	</div>
+
+
+    <section id="course" class="course section">
+        <div class="container">
+            <h3 style="text-align:center;">{% trans 'Les parcours' %}</h3>
+            <p>{% blocktranslate %}Retrouvez ici les différents parcours d’Atlantic Run adapté à votre envie. {% endblocktranslate %}</p>
+            <br>
+
+            {% comment %} Onglets (sélection de la course) {% endcomment %}
+            <div class="nav nav-course row-spaced" id="v-pills-tab" style="margin-bottom: 50px;" role="tablist">
+                    <div class="active" href="#v-pills-aigle" role="tab" aria-controls="v-pills-aigle" aria-selected="true" id="v-pills-aigle-tab" data-toggle="pill">
+                        <button class="img-ronde" style="background: url({% static 'images/aigle 2 dezoom.png' %});">
+                        </button>
+                        <h4>{% trans 'Aigle' %}</h4>
+                        <p>{% trans 'Parcours de 16km' %}</p>
+                    </div>
+                    <div href="#v-pills-pelican" role="tab" aria-controls="v-pills-pelican" aria-selected ="false" id="v-pills-pelican-tab" data-toggle="pill">
+                        <button class="img-ronde" style="background: url({% static 'images/pelican 2 dezoom.png' %});"></button>
+                        <h4>{% trans 'Pelican' %}</h4>
+                        <p>{% trans 'Parcours de 8km' %}</p>
+                    </div>
+                    <div href="#v-pills-poulpe" role="tab" aria-controls="v-pills-poulpe" aria-selected ="false" id="v-pills-poulpe-tab" data-toggle="pill">
+                        <button class="img-ronde" style="background: url({% static 'images/poulpe 2 dezoom.png' %});"></button>
+                        <h4>{% trans 'Poulpe' %}</h4>
+                        <p>{% trans 'Parcours de 4km' %}</p>
+                    </div>
+            </div>
+            
+            {% comment %} Contenu des onglets {% endcomment %}
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-aigle" role="tabpanel" aria-labelledby="v-pills-aigle-tab">
+                    <div class="row" style="align-items: normal;">
+                        <div class="col-md-4">
+                            <div id="slides-aigle" class="slides slides-aigle">
+                                <ul class="slides-container">
+                                    <li class="text-left">
+                                        <img src="{% static 'images/passage16.PNG' %}" alt="">
+                                    </li>
+                                    <li class="text-left">
+                                        <img src="{% static 'images/passage16.PNG' %}" alt="">
+                                    </li>
+                                </ul>
+                                <div class="slides-navigation">
+                                    <a href="#" class="next"><i class="fa fa-arrow-right hidden-sm hidden-xs" aria-hidden="true"></i></a>
+                                    <a href="#" class="prev"><i class="fa fa-arrow-left hidden-sm hidden-xs" aria-hidden="true"></i></a>
+                                </div>
+                            </div><!-- End slides -->
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-7">
+                            <div class="text-justify">
+                                <h3>{% trans 'Parcours Aigle - 16km' %}</h3>
+                                <p>{% blocktrans %}Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat{% endblocktrans %}.</p>
+                                
+                                <div class="work">
+                                    <a href="{% static 'images/parcours16.PNG' %}" class="work-box">
+                                        <img class="work-image" src="{% static 'images/parcours16.PNG' %}">
+                                        <div class="overlay">
+                                            <div class="overlay-caption">
+                                                <h5>{% trans "Parcours de l'Aigle" %}</h5>
+                                                <p>{% trans '16km' %}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-pelican" role="tabpanel" aria-labelledby="v-pills-pelican-tab">
+                    <div class="row" style="align-items: normal;">
+                        <div class="col-md-4">
+                            <div id="slides-pelican" class="slides slides-pelican">
+                                <ul class="slides-container">
+                                    <li class="text-left">
+                                        <img src="{% static 'images/passage16.PNG' %}" alt="">
+                                    </li>
+                                    <li class="text-left">
+                                        <img src="{% static 'images/passage16.PNG' %}" alt="">
+                                    </li>
+                                </ul>
+                                <div class="slides-navigation">
+                                    <a href="#" class="next"><i class="fa fa-arrow-right hidden-sm hidden-xs" aria-hidden="true"></i></a>
+                                    <a href="#" class="prev"><i class="fa fa-arrow-left hidden-sm hidden-xs" aria-hidden="true"></i></a>
+                                </div>
+                            </div><!-- End slides -->
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-7">
+                            <div class="text-justify">
+                                <h3>{% trans 'Parcours Pelican - 8km' %}</h3>
+                                <p>{% blocktrans %}Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat{% endblocktrans %}.</p>
+                                
+                                <div class="work">
+                                    <a href="{% static 'images/parcours8.PNG' %}" class="work-box">
+                                        <img class="work-image" src="{% static 'images/parcours8.PNG' %}">
+                                        <div class="overlay">
+                                            <div class="overlay-caption">
+                                                <h5>{% trans "Parcours du Pelican" %}</h5>
+                                                <p>{% trans '8km' %}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-poulpe" role="tabpanel" aria-labelledby="v-pills-poulpe-tab">
+                    <div class="row" style="align-items: normal;">
+                        <div class="col-md-4">
+                            <div id="slides-poulpe" class="slides slides-poulpe">
+                                <ul class="slides-container">
+                                    <li class="text-left">
+                                        <img src="{% static 'images/passage16.PNG' %}" alt="">
+                                    </li>
+                                    <li class="text-left">
+                                        <img src="{% static 'images/passage16.PNG' %}" alt="">
+                                    </li>
+                                </ul>
+                                <div class="slides-navigation">
+                                    <a href="#" class="next"><i class="fa fa-arrow-right hidden-sm hidden-xs" aria-hidden="true"></i></a>
+                                    <a href="#" class="prev"><i class="fa fa-arrow-left hidden-sm hidden-xs" aria-hidden="true"></i></a>
+                                </div>
+                            </div><!-- End slides -->
+                        </div>
+
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-7">
+                            <div class="text-justify">
+                                <h3>{% trans 'Parcours Poulpe - 4km' %}</h3>
+                                <p>{% blocktrans %}Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat{% endblocktrans %}.</p>
+                                
+                                <div class="work">
+                                    <a href="{% static 'images/parcours8.PNG' %}" class="work-box">
+                                        <img class="work-image" src="{% static 'images/parcours8.PNG' %}">
+                                        <div class="overlay">
+                                            <div class="overlay-caption">
+                                                <h5>{% trans "Parcours du Poulpe" %}</h5>
+                                                <p>{% trans '4km' %}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partenaire" class="partenaire section">
+        <div class="container">
+            <h4 style="text-align:center;">Nos partenaires</h4>
+            <br>
+            <div class="row row-spaced text-center">
+                <div class="col-4">
+                    <button class="img-ronde" target="_blank" onclick="window.open('https://www.junior-atlantique.fr/', '_blank');"><img class="logo" src="{% static 'images/JA.png' %}"></button>
+                </div>
+                <div class="col-4">
+                    <button class="img-ronde" onclick="window.open('https://www.imt-atlantique.fr/', '_blank');"><img class="logo" src="{% static 'images/IMTA.png' %}"></button>
+                </div>
+                <div class="col-4">
+                    <button class="img-ronde" onclick="window.open('https://www.intersport.fr/', '_blank');"><img class="logo" src="{% static 'images/intersport.png' %}"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

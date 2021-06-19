@@ -7,16 +7,22 @@
 
   .navigation {
     position: fixed;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7) ;
     width: 100%;
     height: 100%;
     top: 0;
+    padding-top: 90px;
     left: 0;
     z-index: 99999;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-    transition: opacity 0.5s, visibility 0s 0.5s; }
+    transition: opacity 0.5s, visibility 0s 0.5s;
+  }
+
+  .navigation .row {
+    flex-direction: column;
+  }
     .navigation .primary-nav {
       position: relative;
       top: 45%;
@@ -50,8 +56,24 @@
   .flex-control-nav {
     bottom: 20px; } }
 @media screen and (max-width: 768px) {
-  .banner-text {
-    padding-top: 30%; }
+
+  .container {
+    padding: 0px;
+  }
+
+	.cover-slides h1{
+		font-size: 22px;
+	}
+	.cover-slides p {
+		font-size: 14px;
+	}
+	.slides-navigation a{
+		height: 42px;
+		width: 38px;
+		line-height: 33px;
+	}
+  /*.banner-text {
+    padding-top: 30%; }*/
     .banner-text h1 {
       font-size: 42px; }
     .banner-text p {
@@ -65,17 +87,17 @@
 
   .footer .footer-col {
     margin-bottom: 50px; } }
-@media screen and (max-width: 640px) {
+/*@media screen and (max-width: 640px) {
   .banner-text {
-    padding-top: 35%; } }
+    padding-top: 35%; } }*/
 @media screen and (max-width: 480px) {
-  .banner-text {
-    padding-top: 45%; }
+  /*.banner-text {
+    padding-top: 45%; }*/
     .banner-text h1 {
       font-size: 32px; } }
 @media screen and (max-width: 320px) {
-  .banner-text {
-    padding-top: 55%; }
+  /*.banner-text {
+    padding-top: 55%; }*/
 
   .testimonials blockquote {
     padding: 20px 5% 0; }
