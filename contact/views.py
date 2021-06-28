@@ -26,7 +26,6 @@ def contact(request):
     else :
         form = QuestionForm()
 
-
-        context['form'] = form
+    context['form'] = form
 
     return render(request, 'contact/contact.html', context)

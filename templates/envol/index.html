@@ -1,17 +1,152 @@
 {% extends 'base.html' %}
 {% load i18n %}
 {% load static %}
-
+{% block header %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+{% endblock %}
 {% block content %}     
-    <section class="presentation" style="padding:50px 0px;">
+    <section class="presentation" style="padding:0px 0px;">
+        <div class="banniere">
+            <img style="width:100%;" src="{% static 'images/envol_banniere.png' %}">
+            <!--<h1 style="position:absolute;padding:30px;color: #0072BC;">-->
+            <h3 style="position: absolute;bottom: calc((100% - 5em)/2);text-indent:-10%;padding:0 10%;color: #0072BC;">“Pour que les enfants malades restent des enfants,<br>que leur famille retrouvent force et confiance.”</h3>
+        </div>
+
+        {% comment %}<div style="background:url({% static 'images/envol_banniere.png' %});width:100%;height:auto;">
+            <img style="width:100%;" src="{% static 'images/envol_banniere.png' %}" hidden=true>
+            <!--<h1 style="position:absolute;padding:30px;color: #0072BC;">-->
+            <h1 style="position: absolute;top: 50%;left: 50%;color: #0072BC;">“Pour que les enfants malades restent des enfants, que leur famille retrouvent force et confiance.”</h1>
+        </div>{% endcomment %}
+
         <div class="container">
-            <div class="row text-center">
-                <div class="col-2">
+            <div class="row">
+                <div class="col-md-9">
+                    <h1>Qui sommes-nous ?</h1>
+                    <p style="text-align: justify;">
+                    Association reconnue d’utilité publique, L’ENVOL organise des programmes adaptés aux jeunes malades de 6 à 25 ans et à leur famille. Depuis 1997, elle leur permet de trouver force et confiance en eux pour vivre mieux pendant ou après la maladie et de rompre avec l’isolement.
+                    <br><br>L’ENVOL accompagne gratuitement plus de 4000 bénéficiaires par an au travers de ses séjours adaptés, ateliers à l’hôpital, sorties récréatives et activités en ligne.</p>
                 </div>
-                <div class="col-8">
-                <h1>L'envol</h1>
-                <p style="text-align: justify;">Présentation de l'envol.</p>
+                <div class="col-md-3">
+                    <img src="{% static 'images/envol_logo.png' %}" width="100%">
                 </div>
+                <div class="col-md-12">
+                    <h1>Quelle est notre mission ?</h1>
+                    <p>Nous nous donnons pour mission de favoriser le développement psychosocial des enfants malades et de leur famille par la conception et l’organisation de programmes adaptés et sécurisés basés sur la thérapie récréative.</p>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <center>
+                        <div class="inscription" style="margin:6%;border-radius:44px;width:fit-content;background: #F7A60E66;">
+                            <p style="letter-spacing:font-style:normal;font-weight:bold;text-transform:uppercase;padding:16px 24px;">“L’ENVOL m’a appris que la vie c’était fait pour s’amuser”</p>
+                            <h5 style="text-align:end;text-transform:none;  ">Thomas, 8 ans</h5>
+                        </div>
+                    </center>
+                </div>
+
+                <div class="col-md-12">
+                    <h1>Découvrez nos 4 programmes</h1>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <div class="inscription" style="margin:6%;border-radius:44px;width:fit-content;background: #fff;">
+                            <h2>Les séjours adaptés</h2>
+                            <p>Afin de se sentir bien dans son corps pour vivre pleinement ses rêves et se sentir plus serein pour se battre contre la maladie, L’ENVOL propose des séjours :</p>
+                            <ul class="list-tiret">
+                                <li><p>Rythmés par des activités sportives et artistiques, ainsi que des animations sur le <text style="color:#0072bc;">thème de l’année</text> ;</p></li>
+                                <li><p>Pour l’enfant malade, valorisant son aptitude à progresser dans son développement personnel ;</p></li>
+                                <li><p>Pour les <text style="color:#0072bc;">aidants familiaux</text>, adultes et/ou mineurs, favorisant leurs rencontres avec des pairs et leur offrant quelques jours de répit.</p></li>
+                            </ul>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <div class="inscription" style="margin:6%;border-radius:44px;width:fit-content;background: #fff;">
+                            <h2>Les sorties récréatives</h2>
+                            <p>Nous proposons une parenthèse dans le quotidien afin de s’immerger dans un autre univers avec nos sorties récréatives :</p>
+                            <ul class="list-tiret">
+                            <li><p>Visites d’établissements ou d’entreprises pour créer de nouvelles aspirations professionnelles, artistiques ou culturelles ;</p></li>
+                            <li><p>Journées spéciales familles pour resserrer les liens familiaux.</p></li>
+                            </ul>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <div class="inscription" style="margin:6%;border-radius:44px;width:fit-content;background: #fff;">
+                            <h2>Les ateliers à l’hôpital</h2>
+                            <p>L’ENVOL se mobilise toute l’année pour apporter la magie de ses séjours à l’hôpital avec :</p>
+                            <ul class="list-tiret">
+                            <li><p>Des <text style="color:#0072bc;">ateliers de découverte</text>, moments d’apprentissage autour d’activités ludiques ;</p></li>
+                            <li><p>Des <text style="color:#0072bc;">ateliers d’expression</text>, pour donner aux jeunes des clés pour s’exprimer par la réflexion, la parole ou des supports créatifs et ainsi mieux accepter la maladie ;</p></li>
+                            <li><p>Des <text style="color:#0072bc;">ateliers bien-être</text>, pour apprendre aux parents de l’enfant malade diverses techniques de relaxation, qu’ils pourront réutiliser seuls.</p></li>
+                            </ul>
+                        </div>
+                    </center>
+                </div>
+                <div class="col-md-6">
+                    <center>
+                        <div class="inscription" style="margin:6%;border-radius:44px;width:fit-content;background: #fff;">
+                            <h2>Les activités en ligne</h2>
+                            <p>Pour répondre aux enjeux de santé psychosociale engendrés par la crise sanitaire de 2020 et maintenir le lien social des enfants malades et de leur famille, L’ENVOL propose un programme d’activités en ligne composé :
+                            <ul class="list-tiret">
+                            <li><p>De <text style="color:#0072bc;">kits d’activités</text> adaptés, livrés directement à la famille ou aux enfants hospitalisés ;</p></li>
+                            <li><p>De <text style="color:#0072bc;">lives</text> pendant lesquels les familles se retrouvent et s’amusent ensemble ;</p></li>
+                            <li><p>D’une <text style="color:#0072bc;">plateforme de plus de 70 vidéos d’activités</text> ludiques et adaptées à tous.</p></li>
+                            </ul>
+                        </div>
+                    </center>
+                </div>
+
+
+                <div class="col-md-12">
+                    <h1>Des programmes sur mesure où l’inclusion est le maître mot !</h1>
+                    <p>Avant chaque programme, l’équipe de L’ENVOL étudie chaque dossier médical afin d’adapter chacune de nos activités aux compétences des enfants participant à celles -ci. Grâce à une connaissance de chaque enfant, l’équipe accompagne les bénévoles tout au long des programmes afin que les bénévoles puissent permettre aux enfants de participer, d’avoir confiance en eux et de se surpasser.<br>
+                    En ce sens, nous construisons des programmes inclusifs, proposant des activités adaptées, en partant du principe que ce n’est pas à l’enfant de s’adapter au cadre mais bel et bien à nous, de nous adapter à l’enfant afin de l’accompagner dans ses réussites et le dépassement de soi.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="none" style="position:relative;">
+            <img style="width:100%;" src="{% static 'images/envol_programme.png' %}">
+            <h3 style="width:100%;position:absolute;top: calc(20% - 1em);text-align:center;padding:0 10%;color: #0072BC;">"J'ai appris que même avec sa maladie on pouvait faire plein de choses"</h3>
+            <h3 style="width:100%;position:absolute;bottom:20%;text-align:center;padding:0 10%;color: #0072BC;">Léa, 9 ans</h3>
+        </div>
+
+        <div class="container" style="position:relative;">
+            <h1 style="text-align:center;margin-bottom:20px;">Nos valeurs</h1>
+            <p style="font-family:'Cedarville Cursive', cursive;font-size:70px;position:absolute;top:100px;left:10%;transform:rotate(-25deg)">joie</p>
+            <p style="font-family:'Cedarville Cursive', cursive;font-size:70px;position:absolute;top:90px;left:calc(60% - 1em);transform:rotate(-16deg)">respect</p>
+            <p style="font-family:'Cedarville Cursive', cursive;font-size:70px;position:absolute;top:250px;left:calc(40% - 2em);transform:rotate(30deg)">sérieux</p>
+            <p style="font-family:'Cedarville Cursive', cursive;font-size:70px;position:absolute;top:210px;left:calc(80% - 2em);transform:rotate(-3deg)">espoir</p>
+        </div>
+        <div class="container" style="margin-top:350px;margin-bottom:100px;">
+            <h1 style="text-align:center;margin-bottom:40px;">Nos réseaux</h1>
+            <div class="row row-spaced" style="align-items:center;">
+                <div class="col-1"></div>
+                <div class="col-2 text-center">
+                    <a href="https://www.instagram.com/lenvolasso/" target='_blank'>
+                    <img width=90% style="max-width:120px;" src="{% static 'images/envol_instagram.png' %}"></a>
+                </div>
+                <div class="col-2 text-center">
+                    <a href="https://www.facebook.com/LENVOLAsso/" target='_blank'>
+                    <img width=90% style="max-width:120px;" src="{% static 'images/envol_facebook.png' %}"></a>
+                </div>
+                <div class="col-2 text-center">
+                    <a href="https://twitter.com/LENVOLAsso" target='_blank'>
+                    <img width=90% style="max-width:120px;" src="{% static 'images/envol_twitter.png' %}"></a>
+                </div>
+                <div class="col-2 text-center">
+                    <a href="https://www.linkedin.com/company/lenvol-asso" target='_blank'>
+                    <img width=90% style="max-width:120px;" src="{% static 'images/envol_linkedin.png' %}"></a>
+                </div>
+                <div class="col-2 text-center">
+                    <a href="https://www.youtube.com/channel/UCFda9uW93SD5XL8tY9DBq3w" target='_blank'>
+                    <img width=90% style="max-width:120px;" src="{% static 'images/envol_youtube.png' %}"></a>
+                </div>
+                <div class="col-1"></div>
             </div>
         </div>
     </section>

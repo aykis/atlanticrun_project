@@ -10,11 +10,15 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Atlantic Run</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="{% static 'android-icon-192x192.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'favicon-96x96.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'images/logo/apple-touch-icon.' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/logo/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/logo/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/logo/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'images/logo/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
@@ -48,7 +52,7 @@
                             <button class="nav-link" onclick="window.location.href = '{% url 'envol:index' %}';">L'envol</button>
                         </div>
                         <div class="col-4">
-                            <button class="nav-link" href="">A quoi sert le don ?</button>
+                            <button class="nav-link" onclick="window.location.href = '{% url 'don:index' %}';">A quoi sert le don ?</button>
                         </div>
                     </div>
 
@@ -120,9 +124,10 @@
     </footer><!-- footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="{% static 'js/jquery.min.js' %}"><\/script>')</script>
 	<script src="{% static 'js/jquery.superslides.min.js' %}"></script>
 	<!--<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>-->
+    <script src="{% static 'js/jquery.min.js' %}"><script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>

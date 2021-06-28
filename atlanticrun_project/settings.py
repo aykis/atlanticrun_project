@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'index.apps.IndexConfig',
     'envol.apps.EnvolConfig',
     'contact.apps.ContactConfig',
+    'inscription.apps.InscriptionConfig',
     'snowpenguin.django.recaptcha2',
+    'import_export',
     #'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -146,6 +148,11 @@ LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 TRANSLATABLE_MODEL_MODULES = []
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EXPORT_RECORDS_LIMIT = 1000

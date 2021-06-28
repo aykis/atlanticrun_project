@@ -18,7 +18,7 @@
 
                     {% csrf_token %}
                     
-                    <div class="form-group  {% if form.prenom.errors %}has-warning has-feedback{% endif %}">
+                    <!--<div class="form-group  {% if form.prenom.errors %}has-warning has-feedback{% endif %}">
                         <label for="{{ form.prenom.id_label}}">{{ form.prenom.label }} *</label>
                         {{ form.prenom }}
                     </div>
@@ -36,8 +36,21 @@
                     <div class="form-group {% if form.contenu.errors %}has-warning has-feedback{% endif %}">
                         <label for="{{ form.contenu.id_label }}">{{ form.contenu.label }} *</label>
                         {{ form.contenu }}
-                    </div>
+                    </div>-->
 
+                    {% for element in form %}
+
+                        {% if element.label == "Captcha" %}
+                        <center>
+                        {{ element }}
+                        {% else %}
+                        <div class="form-group  {% if element.errors %}has-warning has-feedback{% endif %}">
+                            <label for="{{ element.id_label}}">{{ element.label }}</label>
+                            {{ element }}
+                        </div>
+                        {% endif %}
+                        {% if element.errors %}{% autoescape off %}{{ element.error }}{% endautoescape %}{% endif %}
+                    {% endfor %}
                     <center>
                         {{form.captcha}}
                         <br>
@@ -47,15 +60,6 @@
                 </form>
             </div>
 
-            {% if errors %}
-            <div>
-                {% for key, error in errors %}
-                {% autoescape off %}
-                    {{ error }}
-                {% endautoescape %}
-                {% endfor %}
-            </div>
-            {% endif %}
         </div>
     </section>
 

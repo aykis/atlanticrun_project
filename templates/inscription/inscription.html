@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% load recaptcha2 %}
+
+{% block header %}
+    {% recaptcha_init %}
+{% endblock %}
+
+{% block content %}
+
+    <section id="presentation" class="presentation section">
+        <div class="container encadre">
+
+            <h1 style="text-align:center;">S'inscrire</h1>
+
+            <div class="row" style="align-items: normal;">
+                <div class="col-lg-8 col-md-6 img-carre-ref" style="padding-right:30px;">
+                    <h3>{% trans 'La course Atlantic Run' %}</h3>
+                    <p>{% blocktranslate %}
+                    L’AtlanticRun est une course caritative organisée par ASF et le BDS de IMT Atlantique, au profit de l’association L’Envol, en partenariat avec divers groupes et entreprises.<br><br>
+                    Après un départ sur le campus de IMT Atlantique au Technopôle Brest-Iroise, vous aurez l’occasion de longer la côte en passant par le sentier côtier, rejoindre la vallée de Sainte-Anne en passant par la Trinité, puis revenir au campus.<br><br>
+                    Une participation permettra de financer le projet de l’Envol:{% endblocktranslate %}<br></p>
+                    <h2>{% trans '1 course = 1 don' %}</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-6 img-carre">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15247.045699869712!2d-4.575150029924401!3d48.35884407532513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816be39dac601ad%3A0x271a5b153615b2ad!2sIMT%20Atlantique!5e1!3m2!1sen!2sfr!4v1623691038456!5m2!1sen!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="download-doc" style="margin-top:50px">
+                <center>
+                    {% for bouton in boutons %}
+                    <button onclick="window.open('{{ bouton.fichier.url }}', '_blank')">{{ bouton.text_bouton }}</button>
+                    <br>
+                    {% endfor %}
+                </center>
+            </div>
+            <div class="formulaire" style="margin-top:30px;">
+                <form action="{% url 'inscription:inscription' %}" method="POST">
+
+                    {% csrf_token %}
+                    
+                    {% for element in form %}
+                    <div class="form-group  {% if element.errors %}has-warning has-feedback{% endif %}">
+                        <label for="{{ element.id_label}}">{{ element.label }}</label>
+                        {{ element }}
+                    </div>
+                    {% endfor %}
+
+                    <center>
+                        <input class="submit" type="submit" value="{% trans "S'inscrire" %}">
+                    </center>
+
+                </form>
+            </div>
+
+            {% if errors %}
+            <div>
+                {% for key, error in errors %}
+                {% autoescape off %}
+                    {{ error }}
+                {% endautoescape %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock %}

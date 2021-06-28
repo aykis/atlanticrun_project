@@ -4,38 +4,54 @@
 
 {% block content %}
 
-    <section id="presentation" class="presentation section">
-        <div class="container">
-            <div class="row" style="align-items: normal;">
-                <div class="col-lg-8 col-md-6 img-carre-ref" style="padding-right:30px;">
-                    <h3>{% trans 'La course Atlantic Run' %}</h3>
-                    <p>{% blocktranslate %}
-                    L’AtlanticRun est une course caritative organisée par ASF et le BDS de IMT Atlantique, au profit de l’association L’Envol, en partenariat avec divers groupes et entreprises.<br><br>
-                    Après un départ sur le campus de IMT Atlantique au Technopôle Brest-Iroise, vous aurez l’occasion de longer la côte en passant par le sentier côtier, rejoindre la vallée de Sainte-Anne en passant par la Trinité, puis revenir au campus.<br><br>
-                    Une participation permettra de financer le projet de l’Envol:{% endblocktranslate %}<br></p>
-                    <h2>{% trans '1 course = 1 don' %}</h2>
-                </div>
+        <section id="presentation" class="presentation section">
+            <div class="container">
+                <div class="row" style="align-items: normal;">
+                    <div class="col-lg-8 col-md-6 img-carre-ref" style="padding-right:30px;">
+                        <h3>{% trans 'La course Atlantic Run' %}</h3>
+                        <p>{% blocktranslate %}
+                        L’AtlanticRun est une course caritative organisée par ASF et le BDS de IMT Atlantique, au profit de l’association L’Envol, en partenariat avec divers groupes et entreprises.<br><br>
+                        Après un départ sur le campus de IMT Atlantique au Technopôle Brest-Iroise, vous aurez l’occasion de longer la côte en passant par le sentier côtier, rejoindre la vallée de Sainte-Anne en passant par la Trinité, puis revenir au campus.<br><br>
+                        Une participation permettra de financer le projet de l’Envol:{% endblocktranslate %}<br></p>
+                        <h2>{% trans '1 course = 1 don' %}</h2>
+                    </div>
 
-                {% comment %} Version image
-                <div class="col-lg-4 col-md-6 col-sm-6 work">
-                    <a href="{% static 'images/map_global.PNG' %}" class="work-box">
-                        <img class="img-carre" src="{% static 'images/map_global.PNG' %}" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>{% trans 'Campus de Brest' %}</h5>
-                                <p>{% trans 'Carte global' %}</p>
-                            </div>
-                        </div><!-- overlay -->
-                    </a>
+                    {% comment %} Version image
+                    <div class="col-lg-4 col-md-6 col-sm-6 work">
+                        <a href="{% static 'images/map_global.PNG' %}" class="work-box">
+                            <img class="img-carre" src="{% static 'images/map_global.PNG' %}" alt="">
+                            <div class="overlay">
+                                <div class="overlay-caption">
+                                    <h5>{% trans 'Campus de Brest' %}</h5>
+                                    <p>{% trans 'Carte global' %}</p>
+                                </div>
+                            </div><!-- overlay -->
+                        </a>
+                    </div>
+                    {% endcomment %}
+                    <div class="col-lg-4 col-md-6 img-carre">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15247.045699869712!2d-4.575150029924401!3d48.35884407532513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816be39dac601ad%3A0x271a5b153615b2ad!2sIMT%20Atlantique!5e1!3m2!1sen!2sfr!4v1623691038456!5m2!1sen!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
-                {% endcomment %}
-                <div class="col-lg-4 col-md-6 img-carre">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15247.045699869712!2d-4.575150029924401!3d48.35884407532513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4816be39dac601ad%3A0x271a5b153615b2ad!2sIMT%20Atlantique!5e1!3m2!1sen!2sfr!4v1623691038456!5m2!1sen!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section><!-- works -->
+
+    <section id="inscription" class="incscription section">
+        <div class="container">
+            <div class="inscription">
+                <div class="row text-center" style="align-items:flex-start;">
+                    <div class="col-md-5">
+                        <h2>Je veux participer à la course !</h2>
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+                        <button onclick="window.location.href='{% url "inscription:inscription" %}';">Participer</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </section><!-- works -->
-
+    </section>
+<img class="img-height-ref" id="img-height-ref" style="width:100%;height:auto;" src="{% static 'images/arthur_course.PNG' %}">
     <div id="slides" class="cover-slides">
 		<ul class="slides-container">
 			<li class="text-left">
@@ -51,7 +67,6 @@
 			<a href="#" class="prev"><i class="fa fa-arrow-left hidden-sm hidden-xs" style="font-size:36px" aria-hidden="true"></i></a>
 		</div>
 	</div>
-
 
     <section id="course" class="course section">
         <div class="container">

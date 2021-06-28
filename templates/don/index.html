@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block content %}
+
+    <section class="presentation" style="padding:50px 0px;">
+        <div class="container">
+            <div class="row" style="align-items:center;">
+                <div class="col-md-9">
+                    <p style="font-weight:bold;font-size:23px">Grâce aux dons collectés dans le cadre de cette course caritative, L’ENVOL va pouvoir accompagner les enfants malades et leur famille gratuitement au travers de nos séjours adaptés, ateliers à l’hôpital, sorties récréatives et activités en ligne.
+                    <br>Pour en savoir plus sur nos actions, n’hésitez pas à consulter la <a href="{% url 'envol:index' %}" style="color:#0072bc;">page de présentation de L’ENVOL</a>.</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img style="max-height:200px;width:auto;" src="{% static 'images/envol_logo.png' %}">
+                </div>
+            </div>
+            <div class="encadre">
+                <h1>Découvrez ce que votre participation à la course solidaire au profit de L’ENVOL permettra de financer</h1>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

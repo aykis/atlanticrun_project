@@ -6,9 +6,9 @@
 
     <section class="presentation" style="padding:50px 0px;">
         <div class="container">
-            <div class="row text-center">
+            <div style="row-gap:15px;" class="row text-center">
                 <div class="col-md-2">
-                    <img width="100%" height="auto" src="{% static 'images/asf.png' %}">
+                    <img class="img-ronde" width="100%" height="auto" src="{% static 'images/asf.png' %}">
                 </div>
                 <div class="col-md-8">
                 <h1>Atlantiques Sans Frontières<br>ASF</h1>
@@ -18,19 +18,29 @@
                 ASF souhaite avant tout mener des actions durables en aidant des populations et personnes dans le besoin.</p>
                 </div>
             </div>
-            <div style="margin-top:20px" class="row text-center">
+            <div style="margin-top:20px;row-gap:10px;" class="row text-center">
                 <div class="col-md-6">
-                    <img class="decouvrir" src="{% static 'images/ASF1.PNG' %}">
+                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/ASF1.PNG' %});">
+                        <!--<img src="{% static 'images/ASF1.PNG' %}">-->
+                        <div class="legend">
+                            <p>ASF en Côte d’Ivoire en 2019: apport de nourriture, de produits hygiéniques, kits scolaires et cours divers dans des orphelinats</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img class="decouvrir" src="{% static 'images/ASF2.PNG' %}">
+                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/ASF2.PNG' %});">
+                        <!--<img class="decouvrir" src="{% static 'images/ASF2.PNG' %}">-->
+                        <div class="legend">
+                            <p>ASF à Esteli (Nicaragua) en 2016: construction d’infrastructures dignes pour des personnes dans la précarité.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
 
-            <div class="row text-center" style="padding:70px 0px;">
+            <div class="row text-center" style="padding:70px 0px 0px;">
                 <div class="col-md-2">
-                    <img width="100%" height="auto" src="{% static 'images/bds.jpg' %}">
+                    <img class="img-ronde" src="{% static 'images/bds.jpg' %}">
                 </div>
                 <div class="col-md-8">
                 <h1>BDS IMT Atlantique<br>Campus de Brest</h1>
@@ -41,10 +51,18 @@
             </div>
             <div style="margin-top:20px" class="row text-center">
                 <div class="col-md-6">
-                    <img class="decouvrir" src="{% static 'images/arthur_course.PNG' %}">
+                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/arthur_course.PNG' %});">
+                        <div class="legend">
+                            <p>Légende 1</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
-                    <img class="decouvrir" src="{% static 'images/arthur_course.PNG' %}">
+                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/arthur_course.PNG' %});">
+                        <div class="legend">
+                            <p>Légende 2</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

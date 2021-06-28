@@ -16,6 +16,10 @@ $('.slides-pelican').css({height: w*0.80 + 'px'});
 /*var w3 = $('.slides-poulpe').outerWidth();*/
 $('.slides-poulpe').css({height: w*0.80 + 'px'});
 
+var hPic = $('.img-height-ref').outerHeight();
+document.getElementById("img-height-ref").style.display = "none";
+$('.cover-slides').css({height: hPic + 'px'});
+
 (function($) {
     "use strict";
 
