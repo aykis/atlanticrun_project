@@ -1,5 +1,5 @@
 from django.shortcuts import render
-import atlanticrun_project.base as base
+import base.base as base
 
 # Create your views here.
 
@@ -7,5 +7,6 @@ import atlanticrun_project.base as base
 def index(request):
     context = {
         'decompteur': base.decompteur(),
+        'footer' : base.footer(),
     }
     return render(request, 'envol/index.html', context)

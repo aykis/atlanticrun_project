@@ -7,14 +7,11 @@ $('.img-carre').css({height: h*1.1 + 'px'});
 // $('.overlay').css({width: h + 'px'});
 
 
-var w = $('.slides-aigle').outerWidth();
-$('.slides-aigle').css({height: w*0.80 + 'px'});
-
-/*var w2 = $('.slides-pelican').outerWidth();*/
-$('.slides-pelican').css({height: w*0.80 + 'px'});
+var w = $('.slides-first').outerWidth();
+$('.slides-first').css({height: w*0.80 + 'px'});
 
 /*var w3 = $('.slides-poulpe').outerWidth();*/
-$('.slides-poulpe').css({height: w*0.80 + 'px'});
+$('.slides-other').css({height: w*0.80 + 'px'});
 
 var hPic = $('.img-height-ref').outerHeight();
 document.getElementById("img-height-ref").style.display = "none";
@@ -44,27 +41,27 @@ $('.cover-slides').css({height: hPic + 'px'});
 	
 
 	/* Présentation des courses */
-	$('#slides-aigle').superslides({
-		inherit_width_from: '.slides-aigle',
-		inherit_height_from: '.slides-aigle',
+	$('#slides-first').superslides({
+		inherit_width_from: '.slides-first',
+		inherit_height_from: '.slides-first',
 		play: 7000,
 		animation: 'fade',
         pagination: null,
 	});
-	$('#slides-pelican').superslides({
-		inherit_width_from: '.slides-aigle',
-		inherit_height_from: '.slides-aigle',
+	$('#slides-other').superslides({
+		inherit_width_from: '.slides-first',
+		inherit_height_from: '.slides-first',
 		play: 7000,
 		animation: 'fade',
         pagination: null,
 	});
-	$('#slides-poulpe').superslides({
-		inherit_width_from: '.slides-aigle',
-		inherit_height_from: '.slides-aigle',
+	/* $('#slides-other').superslides({
+		inherit_width_from: '.slides-first',
+		inherit_height_from: '.slides-first',
 		play: 7000,
 		animation: 'fade',
         pagination: null,
-	});
+	}); */
 	
 	$( ".cover-slides ul li" ).append( "<div class='overlay-background'></div>" );
 	

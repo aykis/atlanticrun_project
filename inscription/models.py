@@ -21,7 +21,7 @@ class Inscription(models.Model):
     email = models.EmailField(verbose_name="Adresse e-mail *")
     paiement = models.BooleanField(verbose_name="Paiement direct", default=False)
     certificat = models.FileField(verbose_name="Certificat médical", blank=True, null=True)
-    taille_tshirt = models.ForeignKey(to = TailleTShirt, null=True, default=1, on_delete=models.SET_NULL, verbose_name="Taille du T-shirt *")
+    taille_tshirt = models.ForeignKey(to = TailleTShirt, null=True, default="M", on_delete=models.SET_NULL, verbose_name="Taille du T-shirt *")
 
     def __str__(self):
         return "{0} {1}, taille {2}".format(self.prenom, self.nom, self.taille_tshirt)

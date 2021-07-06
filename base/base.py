@@ -1,5 +1,7 @@
 from django.utils.translation import ngettext as _
 import datetime
+from .models import *
+from django.shortcuts import get_object_or_404
 
 date = datetime.datetime(day=11, month=9, hour=14, year=2021)
 
@@ -42,3 +44,9 @@ def decompteur():
         txt = _("l'évènement est passé !")
 
     return txt
+
+def footer():
+    description = get_object_or_404(Footer, nom="description")
+    site = get_object_or_404(Footer, nom="site")
+
+    return {'description' : description.texte, "site" : site.texte}

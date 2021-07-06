@@ -109,7 +109,7 @@
             </div>
             <div class="col-md-4">
                 <img src="{% static 'images/logo_course.png' %}" alt="Atlantic Run" class="logo">
-                <p>Ce site a été réalisé via l'aide de Junior Atlantique.</p>
+                <p>{{ footer.description | safe }}</p>
             </div>
             <div class="col-md-4">
             </div>
@@ -118,16 +118,14 @@
                 <a href="https://goo.gl/maps/3o5G1bFmJigDFTJ86" target="_blank">Accédez au campus.</a>
             </div>
             <div class="col-md-12">
-                <p style="text-align:end;">{% trans '&copy 2021 Atlantiques Sans Frontières' %}</p>
+                <p style="text-align:end;">{{ footer.site | safe }}</p>
             </div>
         </div>
-    </footer><!-- footer -->
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{% static 'js/jquery.min.js' %}"><\/script>')</script>
 	<script src="{% static 'js/jquery.superslides.min.js' %}"></script>
-	<!--<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>-->
-    <!--<script src="{% static 'js/jquery.min.js' %}"><script>-->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.flexslider-min.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>

@@ -26,7 +26,7 @@ SECRET_KEY = 'e*of7=2&e9$q0lci@2(&3rp2(ag(43^=-oz*_ng^a4=772+2=@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 RECAPTCHA_PRIVATE_KEY = '6Le87UAbAAAAAM8K2WzMi6YGwcThWPtCqRXTe5sY'
 RECAPTCHA_PUBLIC_KEY = '6Le87UAbAAAAAEbX6tCNCCOJMEtrKQ1F5S8iPsBi'
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'envol.apps.EnvolConfig',
     'contact.apps.ContactConfig',
     'inscription.apps.InscriptionConfig',
+    'base.apps.BaseConfig',
+    'don.apps.DonConfig',
+    'decouvrir.apps.DecouvrirConfig',
     'snowpenguin.django.recaptcha2',
     'import_export',
     #'modeltranslation',
@@ -143,6 +146,7 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
@@ -156,3 +160,17 @@ TRANSLATABLE_MODEL_MODULES = []
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EXPORT_RECORDS_LIMIT = 1000
+
+
+# EMAIL_HOST = 'localhost'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'aykisgeek@gmail.com'
+EMAIL_HOST_PASSWORD = 'wtjtsafeefrahkcx'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
+MAIL_ASF = "testeur"#"atlanticrun.asf@gmail.com"

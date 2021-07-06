@@ -3,69 +3,39 @@
 {% load static %}
 
 {% block content %}
-
+    {% for element in presentations %}
     <section class="presentation" style="padding:50px 0px;">
         <div class="container">
             <div style="row-gap:15px;" class="row text-center">
                 <div class="col-md-2">
-                    <img class="img-ronde" width="100%" height="auto" src="{% static 'images/asf.png' %}">
+                    <img class="img-ronde" width="100%" height="auto" src="{{ element.logo.url }}">
                 </div>
                 <div class="col-md-8">
-                <h1>Atlantiques Sans Frontières<br>ASF</h1>
-                <p style="text-align: justify;">Atlantique Sans Frontière est l’association humanitaire de IMT Atlantique.
-                Créée en janvier 2007, selon la loi 1901, son but premier était de dispenser des aides concrètes dans les pays en voie de développement.
-                C’est ainsi que divers projets sont nés, comme des voyages humanitaires au Nicaragua ou en Côte d’Ivoire, des concerts caritatifs ou des opérations “bol de riz”, dont le but est de demander aux élèves de ne manger qu’un bol de riz en payant leur repas au prix habituel, et de reverser le gain engendré à des associations comme Afrique Initiative.<br>
-                ASF souhaite avant tout mener des actions durables en aidant des populations et personnes dans le besoin.</p>
+                <h1>{{ element.titre | safe }}</h1>
+                    <div style="text-align: justify!important;">
+                    {{ element.texte | safe }}
+                    </div>
                 </div>
             </div>
             <div style="margin-top:20px;row-gap:10px;" class="row text-center">
                 <div class="col-md-6">
-                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/ASF1.PNG' %});">
-                        <!--<img src="{% static 'images/ASF1.PNG' %}">-->
+                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({{ element.photo_1.url}});">
                         <div class="legend">
-                            <p>ASF en Côte d’Ivoire en 2019: apport de nourriture, de produits hygiéniques, kits scolaires et cours divers dans des orphelinats</p>
+                            <p>{{ element.legende_1 }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/ASF2.PNG' %});">
+                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({{ element.photo_2.url }});">
                         <!--<img class="decouvrir" src="{% static 'images/ASF2.PNG' %}">-->
                         <div class="legend">
-                            <p>ASF à Esteli (Nicaragua) en 2016: construction d’infrastructures dignes pour des personnes dans la précarité.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="row text-center" style="padding:70px 0px 0px;">
-                <div class="col-md-2">
-                    <img class="img-ronde" src="{% static 'images/bds.jpg' %}">
-                </div>
-                <div class="col-md-8">
-                <h1>BDS IMT Atlantique<br>Campus de Brest</h1>
-                <p style="text-align: justify;">{% blocktrans %}Le Bureau Des Sports (BDS) de IMT Atlantique est l’association étudiante qui s’occupe de la vie sportive des élèves du campus.
-                De la demande d’intervenants à la rénovation des infrastructures, le BDS a un levier d’action assez important.
-                Grâce à ses partenariats, le BDS participe activement à l’organisation de l’Atlantic Run.{% endblocktrans %}</p>
-                </div>
-            </div>
-            <div style="margin-top:20px" class="row text-center">
-                <div class="col-md-6">
-                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/arthur_course.PNG' %});">
-                        <div class="legend">
-                            <p>Légende 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="decouvrir" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 70%, rgba(0, 0, 0, 0.5) 100%), url({% static 'images/arthur_course.PNG' %});">
-                        <div class="legend">
-                            <p>Légende 2</p>
+                            <p>{{ element.legende_2 }}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    {% endfor %}
 
 {% endblock %}

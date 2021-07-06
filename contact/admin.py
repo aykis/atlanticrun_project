@@ -8,7 +8,7 @@ from .models import *
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
-    list_display=['prenom', 'nom', 'objet', 'contenu', 'date']
+    list_display=['prenom', 'nom', "email", 'objet', 'contenu', 'date']
     list_filter = ['objet', 'date']
     search_fields = ['objet', 'contenu', 'prenom', 'nom']
     #readonly_fields = ['objet', 'contenu', 'date', 'prenom', 'nom']

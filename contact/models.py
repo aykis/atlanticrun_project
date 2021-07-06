@@ -5,8 +5,9 @@ from django.db import models
 class Question(models.Model):
     prenom = models.CharField(max_length=50, verbose_name="Prénom")
     nom = models.CharField(max_length=50, verbose_name="Nom")
+    email = models.EmailField(verbose_name="E-mail")
     objet = models.CharField(max_length=100, verbose_name = "Objet")
-    contenu = models.CharField(max_length=1000, verbose_name = "Votre message")
+    contenu = models.TextField(verbose_name = "Votre message")
     date = models.DateTimeField(auto_now_add=True, verbose_name="Date")
 
     def __str__(self):

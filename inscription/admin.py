@@ -11,8 +11,8 @@ from .models import *
 
 @admin.register(Inscription)
 class InscriptionAdmin(ExportActionMixin, admin.ModelAdmin):
-    list_display=['prenom', 'nom', 'email', 'paiement', 'certificat', 'taille_tshirt']
-    list_filter = ['paiement', 'taille_tshirt', 'paiement', 'certificat']
+    list_display=['prenom', 'nom', 'taille_tshirt', 'email', 'paiement', 'certificat']#
+    list_filter = ['taille_tshirt', 'paiement', 'certificat']
     search_fields = ['prenom', 'nom', 'email']
     widgets={
         'taille__tshirt' : ForeignKeyWidget(TailleTShirt, 'nom'),
