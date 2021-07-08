@@ -7,7 +7,7 @@ import os
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
 from email.mime.image import MIMEImage
-from atlanticrun_project.atlanticrun_project.settings import MAIL_ASF
+from atlanticrun_project.settings import MAIL_ASF
 
 # Create your views here.
 
