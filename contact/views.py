@@ -1,4 +1,4 @@
-from atlanticrun_project.atlanticrun_project.settings import MAIL_ASF
+from atlanticrun_project.settings import MAIL_ASF
 import os
 from django.utils import html
 from .models import Question
