@@ -1,0 +1,10 @@
+Date de l'évènement : 11 Septembre 2021
+
+{{ titre }}
+
+{% for element in elements %}
+{{ element.label }} :
+{{ element.value }}
+{% endfor %}
+
+Lien du site : {{site}}

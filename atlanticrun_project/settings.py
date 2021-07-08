@@ -16,17 +16,9 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'e*of7=2&e9$q0lci@2(&3rp2(ag(43^=-oz*_ng^a4=772+2=@'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '172.16.1.244', 'atlanticrun.imt-atlantique.fr']
 
 RECAPTCHA_PRIVATE_KEY = '6Le87UAbAAAAAM8K2WzMi6YGwcThWPtCqRXTe5sY'
 RECAPTCHA_PUBLIC_KEY = '6Le87UAbAAAAAEbX6tCNCCOJMEtrKQ1F5S8iPsBi'
@@ -147,7 +139,6 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
@@ -174,3 +165,21 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
 MAIL_ASF = "testeur"#"atlanticrun.asf@gmail.com"
+
+# SECURITY WARNING: don't run with debug turned on in production!
+if os.environ.get('ENV') == 'PRODUCTION':
+    DEBUG = False
+    # Static files settings
+    PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (
+        os.path.join(PROJECT_ROOT, 'static'),
+    )
+else:
+    DEBUG = True
+    # SECURITY WARNING: keep the secret key used in production secret!
+    SECRET_KEY = 'e*of7=2&e9$q0lci@2(&3rp2(ag(43^=-oz*_ng^a4=772+2=@'
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
