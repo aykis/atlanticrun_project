@@ -7,3 +7,7 @@ envol/migrations/__pycache__/
 index/__pycache__/
 index/migrations/__pycache__/
 static/images/bds.jfif
+
+atlanticrun_project/settings/production.py
+__pycache__
+staticfiles/
