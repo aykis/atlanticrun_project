@@ -157,15 +157,15 @@ if os.environ.get('ENV') == 'PRODUCTION':
 
 
     SECRET_KEY = 'e*of7=2&e9$q0lci@2(&3rp2(ag(43^=-oz*_ng^a4=772+2=@'
-    
+
     # Static files settings
     PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
     # Extra places for collectstatic to find static files.
     STATICFILES_DIRS = (
-        os.path.join(PROJECT_ROOT, 'static'),
+        os.path.join(BASE_DIR, 'static'),
     )
 
     DATABASES = {
