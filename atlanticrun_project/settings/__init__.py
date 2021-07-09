@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'decouvrir.apps.DecouvrirConfig',
     'snowpenguin.django.recaptcha2',
     'import_export',
-    #'modeltranslation',
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 ]
 
 ROOT_URLCONF = 'atlanticrun_project.urls'

@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-10 01:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: atlanticrun_project/settings/__init__.py:110
+msgid "Français"
+msgstr ""
+
+#: atlanticrun_project/settings/__init__.py:111
+msgid "Anglais"
+msgstr ""
+
+#: base/base.py:21
+#, python-format
+msgid "%(mois)d mois %(jours)d jour"
+msgstr ""
+
+#: base/base.py:29 base/base.py:44
+msgid "l'évènement est passé !"
+msgstr ""
+
+#: base/base.py:33
+#, python-format
+msgid "%(jours)d jour"
+msgstr ""
+
+#: base/base.py:39
+#, python-format
+msgid "%(jours)d jour %(heures)d heure"
+msgstr ""
+
+#: templates/404.html:6
+msgid "Erreur 404."
+msgstr ""
+
+#: templates/404.html:7
+msgid "Une erreur d'URL ou en provenance de la base de donnée peut-être ?"
+msgstr ""
+
+#: templates/500.html:6
+msgid "Erreur 500."
+msgstr ""
+
+#: templates/500.html:7
+msgid "Erreur serveur... Si c'est un soucis technique, essai de recommencer"
+msgstr ""
+
+#: templates/base.html:38
+msgid "L'évènement commence dans"
+msgstr ""
+
+#: templates/base.html:49
+msgid "Nous découvrir"
+msgstr ""
+
+#: templates/base.html:52
+msgid "L'envol"
+msgstr ""
+
+#: templates/base.html:55
+msgid "A quoi sert le don ?"
+msgstr ""
+
+#: templates/base.html:60
+msgid "Menu"
+msgstr ""
+
+#: templates/base.html:78 templates/contact/contact.html:14
+msgid "Nous contacter"
+msgstr ""
+
+#: templates/base.html:79
+msgid "Accédez au campus."
+msgstr ""
+
+#: templates/contact/contact.html:37
+msgid "Envoyer"
+msgstr ""
+
+#: templates/don/index.html:11
+msgid ""
+"Grâce aux dons collectés dans le cadre de cette course caritative, L’ENVOL "
+"va pouvoir accompagner les enfants malades et leur famille gratuitement au "
+"travers de nos séjours adaptés, ateliers à l’hôpital, sorties récréatives et "
+"activités en ligne.\n"
+"                    <br>Pour en savoir plus sur nos actions, n’hésitez pas à "
+"consulter la "
+msgstr ""
+
+#: templates/don/index.html:12
+msgid "page de présentation de L’ENVOL"
+msgstr ""
+
+#: templates/don/index.html:20
+msgid ""
+"Découvrez ce que votre participation à la course solidaire au profit de "
+"L’ENVOL permettra de financer"
+msgstr ""
+
+#: templates/don/index.html:25
+msgid "Parcours Poulpe<br>4km"
+msgstr ""
+
+#: templates/don/index.html:26
+msgid "10€ d'inscription"
+msgstr ""
+
+#: templates/don/index.html:27
+msgid "Du matériel d’arts  pour décorer le site des séjours"
+msgstr ""
+
+#: templates/don/index.html:33
+msgid "Parcours Pellican<br>8km"
+msgstr ""
+
+#: templates/don/index.html:36
+msgid "OU"
+msgstr ""
+
+#: templates/don/index.html:40
+msgid "Parcours Aigle<br>16km"
+msgstr ""
+
+#: templates/don/index.html:44
+msgid "15€ d'inscription"
+msgstr ""
+
+#: templates/don/index.html:45
+msgid "(Elève et Personnel IMT Atlantique)"
+msgstr ""
+
+#: templates/don/index.html:46
+msgid "Un repas sur les séjours pour un enfant malade"
+msgstr ""
+
+#: templates/don/index.html:48
+msgid "20€ d'inscription"
+msgstr ""
+
+#: templates/don/index.html:49
+msgid "(Membre extérieur à IMT Atlantique)"
+msgstr ""
+
+#: templates/don/index.html:50
+msgid "Le matériel pour un atelier à l'hôpital (photo ou expression)"
+msgstr ""
+
+#: templates/don/index.html:53
+msgid "Dons supplémentaires"
+msgstr ""
+
+#: templates/don/index.html:55
+msgid ""
+"30 euros : Une trousse de secours pour 15 enfants que nous emmenons sur nos "
+"séjours."
+msgstr ""
+
+#: templates/don/index.html:56
+msgid ""
+"40 euros : 1 kit à destination des adolescents hospitalisés contenant 3 "
+"activités manuelles."
+msgstr ""
+
+#: templates/don/index.html:57
+msgid ""
+"50 euros : 1 kit à destination des familles contenant 5 activités, une BD et "
+"des goodies."
+msgstr ""
+
+#: templates/don/index.html:115
+msgid ""
+"MERCI POUR VOTRE GÉNÉROSITÉ POUR QUE LES ENFANTS MALADES RESTENT DES ENFANTS"
+msgstr ""
+
+#: templates/envol/index.html:27
+msgid "Qui sommes-nous ?"
+msgstr ""
+
+#: templates/envol/index.html:28
+msgid ""
+"Association reconnue d’utilité publique, L’ENVOL organise des programmes "
+"adaptés aux jeunes malades de 6 à 25 ans et à leur famille. Depuis 1997, "
+"elle leur permet de trouver force et confiance en eux pour vivre mieux "
+"pendant ou après la maladie et de rompre avec l’isolement."
+msgstr ""
+
+#: templates/envol/index.html:29
+msgid ""
+"L’ENVOL accompagne gratuitement plus de 4000 bénéficiaires par an au travers "
+"de ses séjours adaptés, ateliers à l’hôpital, sorties récréatives et "
+"activités en ligne."
+msgstr ""
+
+#: templates/envol/index.html:35
+msgid "Quelle est notre mission ?"
+msgstr ""
+
+#: templates/envol/index.html:36
+msgid ""
+"Nous nous donnons pour mission de favoriser le développement psychosocial "
+"des enfants malades et de leur famille par la conception et l’organisation "
+"de programmes adaptés et sécurisés basés sur la thérapie récréative."
+msgstr ""
+
+#: templates/envol/index.html:42
+msgid "“L’ENVOL m’a appris que la vie c’était fait pour s’amuser”"
+msgstr ""
+
+#: templates/envol/index.html:43
+msgid "Thomas, 8 ans"
+msgstr ""
+
+#: templates/envol/index.html:49
+msgid "Découvrez nos 4 programmes"
+msgstr ""
+
+#: templates/envol/index.html:54
+msgid "Les séjours adaptés"
+msgstr ""
+
+#: templates/envol/index.html:55
+msgid ""
+"Afin de se sentir bien dans son corps pour vivre pleinement ses rêves et se "
+"sentir plus serein pour se battre contre la maladie, L’ENVOL propose des "
+"séjours :"
+msgstr ""
+
+#: templates/envol/index.html:57
+msgid ""
+"Rythmés par des activités sportives et artistiques, ainsi que des animations "
+"sur le <text style=\"color:#0072bc;\">thème de l’année</text> ;"
+msgstr ""
+
+#: templates/envol/index.html:58
+msgid ""
+"Pour l’enfant malade, valorisant son aptitude à progresser dans son "
+"développement personnel ;"
+msgstr ""
+
+#: templates/envol/index.html:59
+msgid ""
+"Pour les <text style=\"color:#0072bc;\">aidants familiaux</text>, adultes et/"
+"ou mineurs, favorisant leurs rencontres avec des pairs et leur offrant "
+"quelques jours de répit."
+msgstr ""
+
+#: templates/envol/index.html:67
+msgid "Les sorties récréatives"
+msgstr ""
+
+#: templates/envol/index.html:68
+msgid ""
+"Nous proposons une parenthèse dans le quotidien afin de s’immerger dans un "
+"autre univers avec nos sorties récréatives :"
+msgstr ""
+
+#: templates/envol/index.html:70
+msgid ""
+"Visites d’établissements ou d’entreprises pour créer de nouvelles "
+"aspirations professionnelles, artistiques ou culturelles ;"
+msgstr ""
+
+#: templates/envol/index.html:71
+msgid "Journées spéciales familles pour resserrer les liens familiaux."
+msgstr ""
+
+#: templates/envol/index.html:79
+msgid "Les ateliers à l’hôpital"
+msgstr ""
+
+#: templates/envol/index.html:80
+msgid ""
+"L’ENVOL se mobilise toute l’année pour apporter la magie de ses séjours à "
+"l’hôpital avec :"
+msgstr ""
+
+#: templates/envol/index.html:82
+msgid ""
+"Des <text style=\"color:#0072bc;\">ateliers de découverte</text>, moments "
+"d’apprentissage autour d’activités ludiques ;"
+msgstr ""
+
+#: templates/envol/index.html:83
+msgid ""
+"Des <text style=\"color:#0072bc;\">ateliers d’expression</text>, pour donner "
+"aux jeunes des clés pour s’exprimer par la réflexion, la parole ou des "
+"supports créatifs et ainsi mieux accepter la maladie ;"
+msgstr ""
+
+#: templates/envol/index.html:84
+msgid ""
+"Des <text style=\"color:#0072bc;\">ateliers bien-être</text>, pour apprendre "
+"aux parents de l’enfant malade diverses techniques de relaxation, qu’ils "
+"pourront réutiliser seuls."
+msgstr ""
+
+#: templates/envol/index.html:92
+msgid "Les activités en ligne"
+msgstr ""
+
+#: templates/envol/index.html:93
+msgid ""
+"Pour répondre aux enjeux de santé psychosociale engendrés par la crise "
+"sanitaire de 2020 et maintenir le lien social des enfants malades et de leur "
+"famille, L’ENVOL propose un programme d’activités en ligne composé :"
+msgstr ""
+
+#: templates/envol/index.html:95
+msgid ""
+"De <text style=\"color:#0072bc;\">kits d’activités</text> adaptés, livrés "
+"directement à la famille ou aux enfants hospitalisés ;"
+msgstr ""
+
+#: templates/envol/index.html:96
+msgid ""
+"De <text style=\"color:#0072bc;\">lives</text> pendant lesquels les familles "
+"se retrouvent et s’amusent ensemble ;"
+msgstr ""
+
+#: templates/envol/index.html:97
+msgid ""
+"D’une <text style=\"color:#0072bc;\">plateforme de plus de 70 vidéos "
+"d’activités</text> ludiques et adaptées à tous."
+msgstr ""
+
+#: templates/envol/index.html:105
+msgid "Des programmes sur mesure où l’inclusion est le maître mot !"
+msgstr ""
+
+#: templates/envol/index.html:106
+msgid ""
+"Avant chaque programme, l’équipe de L’ENVOL étudie chaque dossier médical "
+"afin d’adapter chacune de nos activités aux compétences des enfants "
+"participant à celles -ci. Grâce à une connaissance de chaque enfant, "
+"l’équipe accompagne les bénévoles tout au long des programmes afin que les "
+"bénévoles puissent permettre aux enfants de participer, d’avoir confiance en "
+"eux et de se surpasser."
+msgstr ""
+
+#: templates/envol/index.html:107
+msgid ""
+"En ce sens, nous construisons des programmes inclusifs, proposant des "
+"activités adaptées, en partant du principe que ce n’est pas à l’enfant de "
+"s’adapter au cadre mais bel et bien à nous, de nous adapter à l’enfant afin "
+"de l’accompagner dans ses réussites et le dépassement de soi."
+msgstr ""
+
+#: templates/envol/index.html:114
+msgid "J'ai appris que même avec sa maladie on pouvait faire plein de choses"
+msgstr ""
+
+#: templates/envol/index.html:115
+msgid "Léa, 9 ans"
+msgstr ""
+
+#: templates/envol/index.html:119
+msgid "Nos valeurs"
+msgstr ""
+
+#: templates/envol/index.html:120
+msgid "joie"
+msgstr ""
+
+#: templates/envol/index.html:121
+msgid "respect"
+msgstr ""
+
+#: templates/envol/index.html:122
+msgid "sérieux"
+msgstr ""
+
+#: templates/envol/index.html:123
+msgid "espoir"
+msgstr ""
+
+#: templates/envol/index.html:126
+msgid "Nos réseaux"
+msgstr ""
+
+#: templates/index/index.html:13 templates/inscription/inscription.html:24
+msgid "1 course = 1 don"
+msgstr ""
+
+#: templates/index/index.html:28
+msgid "Je veux participer à la course !"
+msgstr ""
+
+#: templates/index/index.html:32
+msgid "Participer"
+msgstr ""
+
+#: templates/index/index.html:60
+msgid "Les parcours"
+msgstr ""
+
+#: templates/index/index.html:61
+msgid ""
+"Retrouvez ici les différents parcours d’Atlantic Run adapté à votre envie. "
+msgstr ""
+
+#: templates/index/index.html:135
+msgid "Nos partenaires"
+msgstr ""
+
+#: templates/inscription/inscription.html:19
+msgid "La course Atlantic Run"
+msgstr ""
+
+#: templates/inscription/inscription.html:20
+msgid ""
+"\n"
+"                    L’AtlanticRun est une course caritative organisée par "
+"ASF et le BDS de IMT Atlantique, au profit de l’association L’Envol, en "
+"partenariat avec divers groupes et entreprises.<br><br>\n"
+"                    Après un départ sur le campus de IMT Atlantique au "
+"Technopôle Brest-Iroise, vous aurez l’occasion de longer la côte en passant "
+"par le sentier côtier, rejoindre la vallée de Sainte-Anne en passant par la "
+"Trinité, puis revenir au campus.<br><br>\n"
+"                    Une participation permettra de financer le projet de "
+"l’Envol:"
+msgstr ""
+
+#: templates/inscription/inscription.html:53
+msgid "S'inscrire"
+msgstr ""

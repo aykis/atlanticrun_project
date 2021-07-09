@@ -8,8 +8,8 @@
         <div class="container">
             <div class="row" style="align-items:center;">
                 <div class="col-md-9">
-                    <p style="font-weight:bold;font-size:23px">Grâce aux dons collectés dans le cadre de cette course caritative, L’ENVOL va pouvoir accompagner les enfants malades et leur famille gratuitement au travers de nos séjours adaptés, ateliers à l’hôpital, sorties récréatives et activités en ligne.
-                    <br>Pour en savoir plus sur nos actions, n’hésitez pas à consulter la <a href="{% url 'envol:index' %}" style="color:#0072bc;">page de présentation de L’ENVOL</a>.</p>
+                    <p style="font-weight:bold;font-size:23px">{% blocktrans %}Grâce aux dons collectés dans le cadre de cette course caritative, L’ENVOL va pouvoir accompagner les enfants malades et leur famille gratuitement au travers de nos séjours adaptés, ateliers à l’hôpital, sorties récréatives et activités en ligne.
+                    <br>Pour en savoir plus sur nos actions, n’hésitez pas à consulter la {% endblocktrans %}<a href="{% url 'envol:index' %}" style="color:#0072bc;">{% trans "page de présentation de L’ENVOL" %}</a>.</p>
                 </div>
                 <div class="col-md-3 text-center">
                     <img style="max-height:200px;width:auto;" src="{% static 'images/envol_logo.png' %}">
@@ -17,44 +17,44 @@
             </div>
             
             <div class="">
-                <h1 style="text-align:center;">Découvrez ce que votre participation à la course solidaire au profit de L’ENVOL permettra de financer</h1>
+                <h1 style="text-align:center;">{% blocktrans %}Découvrez ce que votre participation à la course solidaire au profit de L’ENVOL permettra de financer{% endblocktrans %}</h1>
             </div>
             <div class="row text-center" style="text-align:-webkit-center!important;">
                 <div class="col-md-6">
                     <img class="img-ronde" src="{% static 'images/poulpe 2.jpg' %}">
-                    <p style="font-weight:bold;">Parcours Poulpe<br>4km</p>
-                    <p style="font-weight:bold;">10€ d'inscription</p>
-                    <p><i>Du matériel d’arts  pour décorer le site des séjours</i></p>
+                    <p style="font-weight:bold;">{% trans "Parcours Poulpe<br>4km" %}</p>
+                    <p style="font-weight:bold;">{% trans "10€ d'inscription" %}</p>
+                    <p><i>{% trans "Du matériel d’arts  pour décorer le site des séjours" %}</i></p>
                 </div>
                 <div class="col-md-6">
                     <div class="row text-center">
                         <div class="col-5">
                             <img class="img-ronde" src="{% static 'images/pelican 2.jpg' %}">
-                            <p style="font-weight:bold;">Parcours Pellican<br>8km</p>
+                            <p style="font-weight:bold;">{% trans "Parcours Pellican<br>8km" %}</p>
                         </div>
                         <div class="col-2" style="align-self:center;">
-                            <h1>OU</h1>
+                            <h1>{% trans "OU" %}</h1>
                         </div>
                         <div class="col-5">
                             <img class="img-ronde" src="{% static 'images/aigle 2.jpg' %}">
-                            <p style="font-weight:bold;">Parcours Aigle<br>16km</p>
+                            <p style="font-weight:bold;">{% trans "Parcours Aigle<br>16km" %}</p>
                         </div>
                     </div>
                 
-                    <p style="font-weight:bold;">15€ d'inscription</p>
-                    <p style="font-weight:bold;">(Elève et Personnel IMT Atlantique)</p>
-                    <p><i>Un repas sur les séjours pour un enfant malade</i></p>
+                    <p style="font-weight:bold;">{% trans "15€ d'inscription"%}</p>
+                    <p style="font-weight:bold;">{% trans "(Elève et Personnel IMT Atlantique)"%}</p>
+                    <p><i>{% trans "Un repas sur les séjours pour un enfant malade"%}</i></p>
                     <br>
-                    <p style="font-weight:bold;">20€ d'inscription</p>
-                    <p style="font-weight:bold;">(Membre extérieur à IMT Atlantique)</p>
-                    <p><i>Le matériel pour un atelier à l'hôpital (photo ou expression)</i></p>
+                    <p style="font-weight:bold;">{% trans "20€ d'inscription"%}</p>
+                    <p style="font-weight:bold;">{% trans "(Membre extérieur à IMT Atlantique)"%}</p>
+                    <p><i>{% trans "Le matériel pour un atelier à l'hôpital (photo ou expression)"%}</i></p>
                 </div>
                 <div class="col-md-12">
-                    <h1>Dons supplémentaires</h1>
+                    <h1>{% trans "Dons supplémentaires"%}</h1>
                     <ul class="list-circle" style="width:fit-content;">
-                        <li><p>30 euros : Une trousse de secours pour 15 enfants que nous emmenons sur nos séjours.</p></li>
-                        <li><p>40 euros : 1 kit à destination des adolescents hospitalisés contenant 3 activités manuelles.</p></li>
-                        <li><p>50 euros : 1 kit à destination des familles contenant 5 activités, une BD et des goodies.</p></li>
+                        <li><p>{% trans "30 euros : Une trousse de secours pour 15 enfants que nous emmenons sur nos séjours."%}</p></li>
+                        <li><p>{% trans "40 euros : 1 kit à destination des adolescents hospitalisés contenant 3 activités manuelles."%}</p></li>
+                        <li><p>{% trans "50 euros : 1 kit à destination des familles contenant 5 activités, une BD et des goodies."%}</p></li>
                     </ul>
                 </div>
             </div>
@@ -112,7 +112,7 @@
                     Enfin, grâce à L'ENVOL à la maison, les enfants peuvent retrouver la magie de L’ENVOL à tout moment grâce à plus de 75 vidéos d’activités divertissantes, de défis ludiques et d’ateliers créatifs, adaptés à tous.</p>
                 </div>-->
         </div>
-            <h1 style="color:#0072BC;text-align:center">MERCI POUR VOTRE GÉNÉROSITÉ POUR QUE LES ENFANTS MALADES RESTENT DES ENFANTS</h1>
+            <h1 style="color:#0072BC;text-align:center">{% trans "MERCI POUR VOTRE GÉNÉROSITÉ POUR QUE LES ENFANTS MALADES RESTENT DES ENFANTS"%}</h1>
     </section>
 
 {% endblock %}

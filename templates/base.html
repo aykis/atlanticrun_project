@@ -46,62 +46,23 @@
                 <nav class="navigation" role="navigation">
                     <div class="row row-spaced text-center">
                         <div class="col-4">
-                            <button class="nav-link" onclick="window.location.href = '{% url 'decouvrir:index' %}';">Nous découvrir</button>
+                            <button class="nav-link" onclick="window.location.href = '{% url 'decouvrir:index' %}';">{% trans "Nous découvrir"%}</button>
                         </div>
                         <div class="col-4">
-                            <button class="nav-link" onclick="window.location.href = '{% url 'envol:index' %}';">L'envol</button>
+                            <button class="nav-link" onclick="window.location.href = '{% url 'envol:index' %}';">{% trans "L'envol"%}</button>
                         </div>
                         <div class="col-4">
-                            <button class="nav-link" onclick="window.location.href = '{% url 'don:index' %}';">A quoi sert le don ?</button>
+                            <button class="nav-link" onclick="window.location.href = '{% url 'don:index' %}';">{% trans "A quoi sert le don ?"%}</button>
                         </div>
                     </div>
 
                     </nav>
-                <a href="#" class="nav-toggle">Menu<span></span></a>
+                <a href="#" class="nav-toggle">{% trans "Menu"%}<span></span></a>
             </div><!-- header content -->
         </header><!-- header -->
     </section><!-- banner -->
 
     {% block content %}{% endblock %}
-    
-    {%comment%}<section id="testimonials" class="section presentation no-padding">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li>
-                            <div class="col-md-6">
-                                <div class="avatar">
-                                    <img src="images/testimonial-1.jpg" alt="" class="img-responsive">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <blockquote>
-                                    <p>"Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam..."
-                                    </p>
-                                    <cite class="author">Susan Sims, Interaction Designer at XYZ</cite>
-                                </blockquote>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-6">
-                                <div class="avatar">
-                                    <img src="images/testimonial-2.jpg" alt="" class="img-responsive">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <blockquote>
-                                    <p>"Cras mattis consectetur purus sit amet fermentum. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur...."
-                                    </p>
-                                    <cite class="author">Susan Sims, Interaction Designer at XYZ</cite>
-                                </blockquote>
-                            </div>
-                        </li>
-                    </ul>
-                </div><!-- flexslider -->
-            </div>
-        </div>
-    </section><!-- testimonials -->{%endcomment%}
 
     <footer class="footer">
         <div class="row justify-text">
@@ -114,8 +75,8 @@
             <div class="col-md-4">
             </div>
             <div class="col-md-2">
-                <button class="btn-footer" onclick="window.location.href = '{% url 'contact:contact' %}';">Nous contacter</button><br>
-                <a href="https://goo.gl/maps/3o5G1bFmJigDFTJ86" target="_blank">Accédez au campus.</a>
+                <button class="btn-footer" onclick="window.location.href = '{% url 'contact:contact' %}';">{% trans "Nous contacter"%}</button><br>
+                <a href="https://goo.gl/maps/3o5G1bFmJigDFTJ86" target="_blank">{% trans "Accédez au campus."%}</a>
             </div>
             <div class="col-md-12">
                 <p style="text-align:end;">{{ footer.site | safe }}</p>

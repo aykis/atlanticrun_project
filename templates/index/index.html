@@ -25,11 +25,11 @@
             <div class="inscription">
                 <div class="row text-center" style="align-items:flex-start;">
                     <div class="col-md-5">
-                        <h2 style="font-weight:bold;">Je veux participer à la course !</h2>
+                        <h2 style="font-weight:bold;">{% trans "Je veux participer à la course !"%}</h2>
                     </div>
                     <div class="col-md-2"></div>
                     <div class="col-md-4">
-                        <button onclick="window.location.href='{% url "inscription:inscription" %}';">Participer</button>
+                        <button onclick="window.location.href='{% url "inscription:inscription" %}';">{% trans "Participer"%}</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
     <section id="course" class="course section">
         <div class="container">
             <h3 style="text-align:center;">{% trans 'Les parcours' %}</h3>
-            <p>{% blocktranslate %}Retrouvez ici les différents parcours d’Atlantic Run adapté à votre envie. {% endblocktranslate %}</p>
+            <p>{% blocktrans %}Retrouvez ici les différents parcours d’Atlantic Run adapté à votre envie. {% endblocktrans %}</p>
             <br>
 
             {% comment %} Onglets (sélection de la course) {% endcomment %}
@@ -130,7 +130,7 @@
 
     <section id="partenaire" class="partenaire section">
         <div class="container">
-            <h4 style="text-align:center;">Nos partenaires</h4>
+            <h4 style="text-align:center;">{% trans "Nos partenaires"%}</h4>
             <br>
             <div class="row row-spaced text-center">
                 {% for partenaire in partenaires%}

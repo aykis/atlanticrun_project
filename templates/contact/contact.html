@@ -11,32 +11,12 @@
     <section class="presentation" style="margin-bottom:50px;">
         <div class="container encadre">
         
-            <h1 style="text-align:center;">Nous contacter</h1>
+            <h1 style="text-align:center;">{% trans "Nous contacter" %}</h1>
 
             <div class="formulaire">
                 <form action="{% url 'contact:contact' %}" method="POST">
 
                     {% csrf_token %}
-                    
-                    <!--<div class="form-group  {% if form.prenom.errors %}has-warning has-feedback{% endif %}">
-                        <label for="{{ form.prenom.id_label}}">{{ form.prenom.label }} *</label>
-                        {{ form.prenom }}
-                    </div>
-
-                    <div class="form-group  {% if form.nom.errors %}has-warning has-feedback{% endif %}">
-                        <label for="{{ form.nom.id_label }}">{{ form.nom.label }} *</label>
-                        {{ form.nom }}
-                    </div>
-
-                    <div class="form-group  {% if form.objet.errors %}has-warning has-feedback{% endif %}">
-                        <label for="{{ form.objet.id_label }}">{{ form.objet.label }} *</label>
-                        {{ form.objet }}
-                    </div>
-
-                    <div class="form-group {% if form.contenu.errors %}has-warning has-feedback{% endif %}">
-                        <label for="{{ form.contenu.id_label }}">{{ form.contenu.label }} *</label>
-                        {{ form.contenu }}
-                    </div>-->
 
                     {% for element in form %}
 
