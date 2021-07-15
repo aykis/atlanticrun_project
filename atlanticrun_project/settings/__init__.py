@@ -215,8 +215,9 @@ LOGGING = {
   'version': 1,
   'disable_existing_loggers': False,
   'formatters': {
-    'django': { 
-      'format':'django: %(message)s',
+    'Simple_format': { 
+      'format':'{levelname}  {message}',
+      'style': '{',
     },
   },
   'handlers': {
@@ -224,6 +225,7 @@ LOGGING = {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
             'filename': '/home/c20beliv/atlanticrun_project/log/django.log',
+            'formatter': 'Simple_format',
         },
   },
   'loggers': {
