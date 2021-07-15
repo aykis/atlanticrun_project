@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'snowpenguin.django.recaptcha2',
     'import_export',
     'modeltranslation',
+    #'djstripe',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -170,4 +171,66 @@ DATABASES = {
         'HOST': '',
         'PORT': '5432',
     }
+}
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    'applogfile': {
+        'level':'DEBUG',
+        'class':'logging.handlers.RotatingFileHandler',
+        'filename': os.path.join(BASE_DIR, 'APPNAME.log'),
+        'maxBytes': 1024*1024*15, # 15MB
+        'backupCount': 10,
+        },
+    }
+}
+
+
+#STRIPE_LIVE_SECRET_KEY = os.environ.get("STRIPE_LIVE_SECRET_KEY", "pk_test_51JCLABC4qmDCalnooUZolookWJ4zeIFhVvIlEPD3CspjMBDMb1uGf3JmkGp6eZFCnSy0R7qA4WL8ckcBGGGCirqD00Gyg9yt5a")
+
+#DJSTRIPE_WEBHOOK_SECRET = "whsec_xxx"  # Get it from the section in the Stripe dashboard where you added the webhook endpoint
+#DJSTRIPE_FOREIGN_KEY_TO_FIELD = "id"
+
+LOGGING = {
+  'version': 1,
+  'disable_existing_loggers': False,
+  'formatters': {
+    'django': { 
+      'format':'django: %(message)s',
+    },
+  },
+  'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '/path/to/django/debug.log',
+        },
+  },
+  'loggers': {
+    'django': {
+        'handlers': ['file'],
+        'level': 'DEBUG',
+        'propagate': True,
+    },
+  }
 }
