@@ -220,10 +220,10 @@ LOGGING = {
     },
   },
   'handlers': {
-        'file': {
+        'c20beliv': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, '/log/logfiles'),
+            'filename': '/home/c20beliv/log/django/logfile',
         },
   },
   'loggers': {
