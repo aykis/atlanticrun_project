@@ -30,6 +30,7 @@ def inscription(request):
 
             data = form.cleaned_data
             form['taille_tshirt'].value = str(data["taille_tshirt"])
+            form['course'].value = str(data["course"])
             form['paiement'].value = "Paiement validé" if data["paiement"] else "Pas encore encaissé"
             form["certificat"].value = "Aucun certificat donné" if data["certificat"] == None else "Un document a été remis"
 

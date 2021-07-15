@@ -8,7 +8,7 @@ from snowpenguin.django.recaptcha2.widgets import ReCaptchaWidget
 class InscriptionForm(ModelForm):
     class Meta:
         model = Inscription
-        fields = ["prenom", "nom", "taille_tshirt", "email", "paiement", "certificat"]#
+        fields = ["prenom", "nom", "course", "taille_tshirt", "email", "paiement", "certificat"]#
         widgets = {
             'prenom': TextInput(attrs={'class': 'form-control', "placeholder": "Michel"}),
             'nom': TextInput(attrs={'class': 'form-control', "placeholder": "Dumas"}),

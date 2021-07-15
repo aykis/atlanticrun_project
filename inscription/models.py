@@ -15,13 +15,21 @@ class TailleTShirt(models.Model):
     def __str__(self):
         return self.nom
 
+class Course(models.Model):
+    nom = models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.nom
+
 class Inscription(models.Model):
     prenom = models.CharField(max_length=50, verbose_name="Prénom *")
     nom = models.CharField(max_length=50, verbose_name="Nom *")
     email = models.EmailField(verbose_name="Adresse e-mail *")
-    paiement = models.BooleanField(verbose_name="Paiement direct", default=False)
+    paiement = models.BooleanField(verbose_name="Payer directement", default=False)
     certificat = models.FileField(verbose_name="Certificat médical", blank=True, null=True)
     taille_tshirt = models.ForeignKey(to = TailleTShirt, null=True, default="M", on_delete=models.SET_NULL, verbose_name="Taille du T-shirt *")
+    course = models.ForeignKey(to = Course, null=True, on_delete=models.SET_NULL, verbose_name="Course *")
+    don = models.FloatField(default=0)
 
     def __str__(self):
         return "{0} {1}, taille {2}".format(self.prenom, self.nom, self.taille_tshirt)

@@ -32,6 +32,14 @@ class TailleTShirtAdmin(admin.ModelAdmin):
     def has_delete_permission(self, request, obj=None):
         return False
 
+@admin.register(Course)
+class CourseAdmin(admin.ModelAdmin):
+    list_display=['nom']
+
+    
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 @admin.register(DocumentsTelechargeable)
 class DocumentsTelechargeableAdmin(admin.ModelAdmin):
