@@ -20,16 +20,16 @@ msgstr ""
 
 #: atlanticrun_project/settings/__init__.py:110
 msgid "Français"
-msgstr ""
+msgstr "French"
 
 #: atlanticrun_project/settings/__init__.py:111
 msgid "Anglais"
-msgstr ""
+msgstr "English"
 
 #: base/base.py:21
 #, python-format
 msgid "%(mois)d mois %(jours)d jour"
-msgstr ""
+msgstr "%(mois)d months %(jours)d days"
 
 #: base/base.py:29 base/base.py:44
 msgid "l'évènement est passé !"
