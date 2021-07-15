@@ -223,7 +223,7 @@ LOGGING = {
         'c20beliv': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/c20beliv/log/django/logfile',
+            'filename': '/home/c20beliv/atlanticrun_project/log/django.log',
         },
   },
   'loggers': {
