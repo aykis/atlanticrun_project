@@ -230,7 +230,7 @@ LOGGING = {
   },
   'loggers': {
     'django': {
-        'handlers': ['file'],
+        'handlers': ['c20beliv'],
         'level': 'DEBUG',
         'propagate': True,
     },
