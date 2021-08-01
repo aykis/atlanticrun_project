@@ -17,9 +17,10 @@ class TailleTShirt(models.Model):
 
 class Course(models.Model):
     nom = models.CharField(max_length=20)
+    prix_en_centimes = models.IntegerField(default = 1000)
 
     def __str__(self):
-        return self.nom
+        return self.nom + " - " + str(self.prix_en_centimes/100) + "€"
 
 class Inscription(models.Model):
     prenom = models.CharField(max_length=50, verbose_name="Prénom *")

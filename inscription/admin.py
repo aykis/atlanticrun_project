@@ -34,7 +34,7 @@ class TailleTShirtAdmin(admin.ModelAdmin):
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display=['nom']
+    list_display=['nom', "prix_en_centimes"]
 
     
     def has_delete_permission(self, request, obj=None):

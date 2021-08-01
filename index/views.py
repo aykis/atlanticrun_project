@@ -11,7 +11,7 @@ def index(request):
     context = {
         'decompteur' : base.decompteur(),
         'footer' : base.footer(),
-        'lacourse' : get_object_or_404(Texte, pk=1),
+        'lacourse' : get_object_or_404(Texte, titre="La course Atlantic Run"),
         'caroussel_principal' : get_object_or_404(Caroussel, pk=1).images.all(),
         'img_ref' : get_object_or_404(Caroussel, pk=1).images.filter(pk=1)[0].image,
         'partenaires' : Partenaire.objects.all().order_by("ordre"),
