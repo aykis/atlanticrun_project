@@ -1,45 +1,47 @@
 from django.utils.translation import ngettext as _
+from django.utils.translation import gettext
 import datetime
 from .models import *
 from django.shortcuts import get_object_or_404
 
-date = datetime.datetime(day=11, month=9, hour=14, year=2021)
+date = datetime.datetime(day=15, month=9, hour=14, year=2022)
 
 def decompteur():
 
-    jours = date.day-datetime.datetime.now().day
-    if jours < 0:
-        mois = date.month-datetime.datetime.now().month-1
-        jours +=31
+    jours = date-datetime.datetime.now()
+    
+    # if jours.days < 1:
+    #     mois = date.days//30.3
+    #     Nbjours = jours.days-mois*30.3
 
-    else :
-        mois = date.month-datetime.datetime.now().month
+    # else :
+    #     mois = date.month-datetime.datetime.now().month
     heures = date.hour-datetime.datetime.now().hour
 
-    if mois > 1 :
-        txt = _(
-            '%(mois)d mois %(jours)d jour',
-            '%(mois)d mois %(jours)d jours',
-            jours
-        ) % {
-            'mois': mois,
-            'jours': jours,
-        }
-    elif mois<0:
-        txt = _("l'évènement est passé !")
+    # if mois > 1 :
+    #     txt = _(
+    #         '%(mois)d mois %(jours)d jour',
+    #         '%(mois)d mois %(jours)d jours',
+    #         jours
+    #     ) % {
+    #         'mois': mois,
+    #         'jours': jours,
+    #     }
+    # elif mois<0:
+    #     txt = gettext("l'évènement est passé !")
 
-    elif jours > 6:
+    if jours.days > 6:
         txt = _(
             '%(jours)d jour',
             '%(jours)d jours',
-            jours
-        ) % { 'jours' : jours}
-    elif jours < 1 and jours >=0:
+            jours.days
+        ) % { 'jours' : jours.days}
+    elif jours.days <= 6 and jours.days >=0:
         txt = _(
             '%(jours)d jour %(heures)d heure',
             '%(jours)d jour %(heures)d heures',
             heures
-        ) % { 'jours' : jours}
+        ) % { 'jours' : jours.days}
     else:
         txt = _("l'évènement est passé !")
 

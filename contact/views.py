@@ -2,9 +2,11 @@ from atlanticrun_project.settings import MAIL_ASF
 import os
 from django.utils import html
 from .models import Question
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 import base.base as base
 from .forms import QuestionForm
+
+from django.urls import reverse
 
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import get_template
@@ -61,6 +63,7 @@ def contact(request):
 
         else:
             context['errors'] = form.errors.items()
+        return render(request, 'demande_confirme.html', context)
     else :
         form = QuestionForm()
 
