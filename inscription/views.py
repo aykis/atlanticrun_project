@@ -11,6 +11,51 @@ from atlanticrun_project.settings import MAIL_ASF
 
 # Create your views here.
 
+import stripe
+from django.conf import settings
+from django.http import JsonResponse
+from django.views import View
+
+stripe.api_key = settings.STRIPE_SECRET_KEY
+
+def paiement(self, request, *args, **kwargs):
+    course_id = self.kwargs["pk"]
+    course = Inscription.objects.get(id=course_id)
+    YOUR_DOMAIN = "atlanticrun.imt-atlantique.fr"
+
+    checkout_session = stripe.checkout.Session.create(
+        payment_method_types=['card'],
+        line_items=[
+            {
+                'price_data': {
+                    'currency': 'eur',
+                    'unit_amount': course.prix_en_centimes,
+                    'product_data': {
+                        'name': course.nom
+                    },
+                },
+                'quantity': 1,
+            },
+        ],
+        metadata={
+            "product_id": course.id
+        },
+        mode='payment',
+        success_url = YOUR_DOMAIN + '/success/',
+        cancel_url = YOUR_DOMAIN + '/cancel/',
+    )
+    return JsonResponse({
+        'id': checkout_session.id
+    })
+
+
+from django.views.generic import TemplateView
+
+def SuccessView(TemplateView):
+    template_name = "success.html"
+
+def CancelView(TemplateView):
+    template_name = "cancel.html"
 
 def inscription(request):
 
